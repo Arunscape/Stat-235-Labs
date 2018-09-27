@@ -41,7 +41,7 @@
   Lab 1
   \vspace{1cm}
   
-  By: Arun Woosaree
+  WOOSAREE, Arun
   \vspace{1cm}
   
   \Huge
@@ -120,11 +120,11 @@ between the process happening at \SI{600}{\celsius} and \SI{800}{\celsius}.
 \begin{table}[H]
  \centering
  \begin{tabular}{c|c|c|c|}
-  \multirow{2}{*}{Statistics} & \multicolumn{3}{c|}{Temperature Levels (\SI{}{\celsius})}             \\ \cline{2-4}
-                              & 400                                                       & 600 & 800 \\ \hline
-  Mean                        & 0                                                         & 0   & 0   \\ \hline
-  Std. Deviation              & 0                                                         & 0   & 0   \\ \hline
-  Variance                    & 0                                                         & 0   & 0   \\ \hline
+  \multirow{2}{*}{Statistics} & \multicolumn{3}{c|}{Temperature Levels (\SI{}{\celsius})}                       \\ \cline{2-4}
+                              & 400                                                       & 600      & 800      \\ \hline
+  Mean                        & 43.65                                                     & 39.7     & 39.7     \\ \hline
+  Std. Deviation              & 2.700389                                                  & 2.716421 & 2.704771 \\ \hline
+  Variance                    & 7.292105                                                  & 7.378947 & 7.315789 \\ \hline
  \end{tabular}
  \caption{My caption}
  \label{tempmean}
@@ -136,12 +136,12 @@ between the process happening at \SI{600}{\celsius} and \SI{800}{\celsius}.
 \begin{table}[H]
  \centering
  \begin{tabular}{c|c|c|c|}
-  \multirow{2}{*}{Statistics} & \multicolumn{3}{c|}{Temperature Levels (\SI{}{\celsius})}             \\ \cline{2-4}
-                              & 400                                                       & 600 & 800 \\ \hline
-  Lower Quartile              & 0                                                         & 0   & 0   \\ \hline
-  Median                      & 0                                                         & 0   & 0   \\ \hline
-  Upper Quartile              & 0                                                         & 0   & 0   \\ \hline
-  IQR                         & 0                                                         & 0   & 0   \\ \hline
+  \multirow{2}{*}{Statistics} & \multicolumn{3}{c|}{Temperature Levels (\SI{}{\celsius})}               \\ \cline{2-4}
+                              & 400                                                       & 600   & 800 \\ \hline
+  Lower Quartile              & 42                                                        & 38    & 38  \\ \hline
+  Median                      & 44                                                        & 40    & 40  \\ \hline
+  Upper Quartile              & 45.25                                                     & 41.25 & 41  \\ \hline
+  IQR                         & 3.25                                                      & 3.25  & 3   \\ \hline
  \end{tabular}
  \caption{My caption}
  \label{tempquart}
@@ -153,12 +153,33 @@ The 400  one doesn’t seem to match, but for 600  and 800 , the positions of th
 
 \begin{table}[H]
  \centering
- \begin{tabular}{c|c|c|c|}
-  Pressure & Mean & Std. Deviation & Mean Change \\ \hline
-  0        & 0    & 0              & 0           \\ \hline
-  Average  &      &                & 0           \\ \hline
+ \begin{tabular}{|c|c|c|c|}
+  \hline
+  Pressure & Mean                          & Std. Deviation & Mean Change \\ \hline
+  0.25     & 45.33333                      & 2.309401       &             \\ \hline
+  0.3      & 44                            & 1.732051       & -0.57735    \\ \hline
+  0.35     & 43.33333                      & 1.527525       & -0.20453    \\ \hline
+  0.4      & 43.66667                      & 2.886751       & 1.359226    \\ \hline
+  0.45     & 42.66667                      & 2.886751       & 0           \\ \hline
+  0.5      & 43.33333                      & 3.21455        & 0.327799    \\ \hline
+  0.55     & 42                            & 1.732051       & -1.4825     \\ \hline
+  0.6      & 42                            & 2.645751       & 0.913701    \\ \hline
+  0.65     & 41.33333                      & 2.309401       & -0.33635    \\ \hline
+  0.7      & 42                            & 2.645751       & 0.33635     \\ \hline
+  0.75     & 41.33333                      & 2.309401       & -0.33635    \\ \hline
+  0.8      & 40.66667                      & 1.154701       & -1.1547     \\ \hline
+  0.85     & 40.66667                      & 2.081666       & 0.926965    \\ \hline
+  0.9      & 40.66667                      & 2.886751       & 0.805085    \\ \hline
+  0.95     & 39.66667                      & 2.886751       & 0           \\ \hline
+  1        & 38.66667                      & 1.154701       & -1.73205    \\ \hline
+  1.05     & 38.33333                      & 2.309401       & 1.154701    \\ \hline
+  1.1      & 38                            & 3.464102       & 1.154701    \\ \hline
+  1.15     & 36                            & 1.732051       & -1.73205    \\ \hline
+  1.2      & 35.33333                      & 3.21455        & 1.482499    \\ \hline
+  % Average  &                               &                & 0.047639    \\ \hline
+  Average  & \multicolumn{3}{r|}{0.047639}                                \\ \hline
  \end{tabular}
- \caption{My caption}
+ \caption{INSERT CAPTION HERE}
  \label{pressurestat}
 \end{table}
 
