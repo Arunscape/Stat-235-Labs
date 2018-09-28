@@ -96,6 +96,7 @@ When taking a step back and squinting, nothing seems to be visually away from
 the bulk of the data.
 
 \subsection{Centers and Spreads}
+
 The first histogram (Figure \ref{thicc400}) has a center at bin 44, and a spread
 (range) of 10. The second histogram (Figure \ref{thicc600}) has a center at bin
 41 and a spread of 10 as well. The third histogram (Figure \ref{thicc800}) has a
@@ -115,7 +116,7 @@ more significant decrease in thickness overall, compared to the difference
 between the process happening at \SI{600}{\celsius} and \SI{800}{\celsius}.
 
 \section{Summary Statistics}
-
+\label{sec2}
 \subsection{Mean, Std. Deviation, Variance for each Temperature Level}
 
 \begin{table}[H]
@@ -153,36 +154,36 @@ fluctuating from about 2.70-2.72.
 
 Looking at Table \ref{tempquart}, each lower quartile is further from the median than their respective
 upper quartiles. This supports the conclusion that each histogram is left-skewed
-which was reached in Section \ref{Shapes} by visually inspection of the histograms.
+which was reached in Section \ref{Shapes} by visual inspection of the histograms.
 \subsection{Mean \& Std. Deviation of Thickness at Each Pressure Value}
 
 \begin{table}[H]
  \centering
  \begin{tabular}{|c|c|c|c|}
   \hline
-  Pressure & Mean                          & Std. Deviation & Mean Change \\ \hline
-  0.25     & 45.33333                      & 2.309401       &             \\ \hline
-  0.3      & 44                            & 1.732051       & -1.33333    \\ \hline
-  0.35     & 43.33333                      & 1.527525       & -0.66667    \\ \hline
-  0.4      & 43.66667                      & 2.886751       & 0.33334     \\ \hline
-  0.45     & 42.66667                      & 2.886751       & -1          \\ \hline
-  0.5      & 43.33333                      & 3.21455        & 0.66666     \\ \hline
-  0.55     & 42                            & 1.732051       & -1.33333    \\ \hline
-  0.6      & 42                            & 2.645751       & 0           \\ \hline
-  0.65     & 41.33333                      & 2.309401       & -0.66667    \\ \hline
-  0.7      & 42                            & 2.645751       & 0.66667     \\ \hline
-  0.75     & 41.33333                      & 2.309401       & -0.66667    \\ \hline
-  0.8      & 40.66667                      & 1.154701       & -0.66666    \\ \hline
-  0.85     & 40.66667                      & 2.081666       & 0           \\ \hline
-  0.9      & 40.66667                      & 2.886751       & 0           \\ \hline
-  0.95     & 39.66667                      & 2.886751       & -1          \\ \hline
-  1        & 38.66667                      & 1.154701       & -1          \\ \hline
-  1.05     & 38.33333                      & 2.309401       & -0.33334    \\ \hline
-  1.1      & 38                            & 3.464102       & -0.33333    \\ \hline
-  1.15     & 36                            & 1.732051       & -2          \\ \hline
-  1.2      & 35.33333                      & 3.21455        & -0.66667    \\ \hline
+  Pressure & Mean                           & Std. Deviation & Mean Change \\ \hline
+  0.25     & 45.33333                       & 2.309401       &             \\ \hline
+  0.3      & 44                             & 1.732051       & -1.33333    \\ \hline
+  0.35     & 43.33333                       & 1.527525       & -0.66667    \\ \hline
+  0.4      & 43.66667                       & 2.886751       & 0.33334     \\ \hline
+  0.45     & 42.66667                       & 2.886751       & -1          \\ \hline
+  0.5      & 43.33333                       & 3.21455        & 0.66666     \\ \hline
+  0.55     & 42                             & 1.732051       & -1.33333    \\ \hline
+  0.6      & 42                             & 2.645751       & 0           \\ \hline
+  0.65     & 41.33333                       & 2.309401       & -0.66667    \\ \hline
+  0.7      & 42                             & 2.645751       & 0.66667     \\ \hline
+  0.75     & 41.33333                       & 2.309401       & -0.66667    \\ \hline
+  0.8      & 40.66667                       & 1.154701       & -0.66666    \\ \hline
+  0.85     & 40.66667                       & 2.081666       & 0           \\ \hline
+  0.9      & 40.66667                       & 2.886751       & 0           \\ \hline
+  0.95     & 39.66667                       & 2.886751       & -1          \\ \hline
+  1        & 38.66667                       & 1.154701       & -1          \\ \hline
+  1.05     & 38.33333                       & 2.309401       & -0.33334    \\ \hline
+  1.1      & 38                             & 3.464102       & -0.33333    \\ \hline
+  1.15     & 36                             & 1.732051       & -2          \\ \hline
+  1.2      & 35.33333                       & 3.214550       & -0.66667    \\ \hline
   % Average  &                               &                & 0.047639    \\ \hline
-  Average  & \multicolumn{3}{r|}{0.047639}                                \\ \hline
+  Average  & \multicolumn{3}{r|}{-0.526315}                                \\ \hline
  \end{tabular}
  \caption{Mean thicknesses of the films produced through the LPCVD process at varying pressures. It should be noted that this is the same data, just represented differently}
  \label{pressurestat}
@@ -195,16 +196,20 @@ which was reached in Section \ref{Shapes} by visually inspection of the histogra
 \begin{figure}[H]
  \centering
  \includegraphics[width=\textwidth]{thiccvstemp.png}
- \caption{INSERT CAPTION HERE}
+ \caption{Scatterplot of the film's resulting thickness at \SI{400}{\celsius}, \SI{600}{\celsius}, and \SI{800}{\celsius}}
  \label{thiccvstemp}
 \end{figure}
+
+From Figure \ref{thiccvstemp}, we can see that higher temperatures result in
+overall lower thickness of the films deposited. This is consistent with the summaries
+obtained in Section \ref{sec2}
 
 \subsection{Thickness vs. Pressure by Temperature}
 
 \begin{figure}[H]
  \centering
  \includegraphics[width=\textwidth]{thiccvspressurebytemp.png}
- \caption{INSERT CAPTION HERE}
+ \caption{Thickness as a result of pressure and temperature scatterplot}
  \label{thiccvspressurebytemp}
 \end{figure}
 
@@ -212,7 +217,13 @@ which was reached in Section \ref{Shapes} by visually inspection of the histogra
 \subsection{Relationship Between Thickness and Pressure for each Temperature Level}
 
 From Figure \ref{thiccvspressurebytemp}, we can see very clearly that as pressure
-is increased, the thickness of the film decreases
+is increased, the thickness of the film deposited decreases. At \SI{400}{\celsius},
+we can see that the resulting thickness of the film varies a bit more as the pressure
+varies, compared to \SI{600}{\celsius} and \SI{800}{\celsius}. When the temperature is
+increased to \SI{600}{\celsius} and \SI{800}{\celsius}, the resulting thicknesses were
+more consistent and lower. At pressures over about 0.9 Torr, the thickness
+of the films still go down as the pressure increases, but increasing the temperature from
+\SI{600}{\celsius} to \SI{800}{\celsius} does not seem to decrease the thickness by much.
 
 \section{How should the temperature and pressure be selected to produce the thinnest possible film for the LPCVD process?}
 
