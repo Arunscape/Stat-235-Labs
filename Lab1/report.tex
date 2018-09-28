@@ -63,25 +63,26 @@
 \begin{figure}[H]
  \centering
  \includegraphics[width=\textwidth]{thicc400.png}
- \caption{INSERT CAPTION HERE}
+ \caption{Distribution of film thickness for the LPCVD process at \SI{400}{\celsius}}
  \label{thicc400}
 \end{figure}
 
 \begin{figure}[H]
  \centering
  \includegraphics[width=\textwidth]{thicc600.png}
- \caption{INSERT CAPTION HERE}
+ \caption{Distribution of film thickness for the LPCVD process at \SI{600}{\celsius}}
  \label{thicc600}
 \end{figure}
 
 \begin{figure}[H]
  \centering
  \includegraphics[width=\textwidth]{thicc800.png}
- \caption{INSERT CAPTION HERE}
+ \caption{Distribution of film thickness for the LPCVD process at \SI{800}{\celsius}}
  \label{thicc800}
 \end{figure}
 
 \subsection{Shapes}
+\label{Shapes}
 All the histograms above appear to be slightly left-skewed. Figure
 \ref{thicc400} appears to be very slightly left-skewed, while Figure
 \ref{thicc600} appears to be a little more left-skewed. Figure \ref{thicc800}
@@ -122,14 +123,17 @@ between the process happening at \SI{600}{\celsius} and \SI{800}{\celsius}.
  \begin{tabular}{c|c|c|c|}
   \multirow{2}{*}{Statistics} & \multicolumn{3}{c|}{Temperature Levels (\SI{}{\celsius})}                       \\ \cline{2-4}
                               & 400                                                       & 600      & 800      \\ \hline
-  Mean                        & 43.65                                                     & 39.7     & 39.7     \\ \hline
+  Mean                        & 43.65                                                     & 39.7     & 39.5     \\ \hline
   Std. Deviation              & 2.700389                                                  & 2.716421 & 2.704771 \\ \hline
   Variance                    & 7.292105                                                  & 7.378947 & 7.315789 \\ \hline
  \end{tabular}
- \caption{My caption}
+ \caption{Mean, standard deviation, and variance of the resulting film's thickness at \SI{400}{\celsius}, \SI{600}{\celsius}, and \SI{800}{\celsius}}
  \label{tempmean}
 \end{table}
 
+When observing Table \ref{tempmean}, we can see that the mean thickness of the film goes down as the temperature
+is increased, (the change from \SI{400}{\celsius} to \SI{600}{\celsius} is more significant than the change in thickness from \SI{600}{\celsius} to \SI{800}{\celsius}) while the standard deviation seems to mostly remain the same,
+fluctuating from about 2.70-2.72.
 
 \subsection{Quartiles}
 
@@ -143,12 +147,13 @@ between the process happening at \SI{600}{\celsius} and \SI{800}{\celsius}.
   Upper Quartile              & 45.25                                                     & 41.25 & 41  \\ \hline
   IQR                         & 3.25                                                      & 3.25  & 3   \\ \hline
  \end{tabular}
- \caption{My caption}
+ \caption{Quartile positions and the inner quartile range for the resulting film's thickness of the LPCVD process at \SI{400}{\celsius}, \SI{600}{\celsius}, and \SI{800}{\celsius}}
  \label{tempquart}
 \end{table}
 
-Wait check this
-The 400  one doesn’t seem to match, but for 600  and 800 , the positions of the quartiles seem to support the conclusion that these histograms are left-skewed, since Q1 is further from the median than Q3 is.
+Looking at Table \ref{tempquart}, each lower quartile is further from the median than their respective
+upper quartiles. This supports the conclusion that each histogram is left-skewed
+which was reached in Section \ref{Shapes} by visually inspection of the histograms.
 \subsection{Mean \& Std. Deviation of Thickness at Each Pressure Value}
 
 \begin{table}[H]
@@ -179,7 +184,7 @@ The 400  one doesn’t seem to match, but for 600  and 800 , the positions of th
   % Average  &                               &                & 0.047639    \\ \hline
   Average  & \multicolumn{3}{r|}{0.047639}                                \\ \hline
  \end{tabular}
- \caption{INSERT CAPTION HERE}
+ \caption{Mean thicknesses of the films produced through the LPCVD process at varying pressures. It should be noted that this is the same data, just represented differently}
  \label{pressurestat}
 \end{table}
 
