@@ -1,0 +1,254 @@
+%preamble
+\documentclass[letterpaper]{article}
+\synctex=1
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+
+\usepackage{lipsum}
+\usepackage{float}
+% \bibliographystyle{IEEEtran}
+% \bibliographystyle{ieeetr}
+
+\usepackage{amssymb}
+
+\usepackage{siunitx}
+
+\usepackage{multirow}
+% for merging table cells I think
+
+\usepackage{fancyhdr} %header
+\fancyhf{}
+\fancyhead[R]{Arun Woosaree XXXXXXX}
+\renewcommand\headrulewidth{0pt}
+\fancyfoot[C]{\thepage}
+\renewcommand\footrulewidth{0pt}
+\pagestyle{fancy}
+
+% make subsection use letters
+\renewcommand{\thesubsection}{\thesection.\alph{subsection}}
+
+%actual document
+\begin{document}
+
+% \maketitle %insert titlepage here
+\begin{titlepage}
+ \begin{center}
+  \vspace*{1cm}
+  \Huge
+  Stat 235
+  \vspace{1cm}
+  
+  Lab 1
+  \vspace{1cm}
+  
+  WOOSAREE, Arun
+  \vspace{1cm}
+  
+  \Huge
+  Lab EL12
+  \vspace{1cm}
+  
+  TA: Jessa Marley
+  \vspace{1cm}
+  
+  \today
+  \vfill
+ \end{center}
+\end{titlepage}
+
+\section{Histograms}
+
+\subsection{Histograms of Thickness: 400ºC, 600ºC, and 800ºC}
+
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=\textwidth]{thicc400.png}
+ \caption{Distribution of film thickness for the LPCVD process at \SI{400}{\celsius}}
+ \label{thicc400}
+\end{figure}
+
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=\textwidth]{thicc600.png}
+ \caption{Distribution of film thickness for the LPCVD process at \SI{600}{\celsius}}
+ \label{thicc600}
+\end{figure}
+
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=\textwidth]{thicc800.png}
+ \caption{Distribution of film thickness for the LPCVD process at \SI{800}{\celsius}}
+ \label{thicc800}
+\end{figure}
+
+\subsection{Shapes}
+\label{Shapes}
+All the histograms above appear to be slightly left-skewed. Figure
+\ref{thicc400} appears to be very slightly left-skewed, while Figure
+\ref{thicc600} appears to be a little more left-skewed. Figure \ref{thicc800}
+also visually looks left-skewed as well. All histograms have one obvious peak,
+but at first glance, Figure \ref{thicc800} might seem to have a second smaller
+peak in bin 38, but upon further inspection, the frequency count only has a
+difference of 1 compared to its surroundings, which does not seem significant
+enough to count as a second peak. So, each histogram above is single-peaked.
+There don’t seem to be any obvious outliers judging from the 3 histograms above.
+When taking a step back and squinting, nothing seems to be visually away from
+the bulk of the data.
+
+\subsection{Centers and Spreads}
+
+The first histogram (Figure \ref{thicc400}) has a center at bin 44, and a spread
+(range) of 10. The second histogram (Figure \ref{thicc600}) has a center at bin
+41 and a spread of 10 as well. The third histogram (Figure \ref{thicc800}) has a
+center around 40, and has a spread of 9. For all 3 histograms, the means are
+slightly less than their respective medians, or visually, the means are slightly
+to the left of the medians, which seems to partially confirm the left skewness
+of the histograms. (Although the difference betweem the medians and their
+respective means is not huge.) The mean and median for each distribution can be
+found in Tables \ref{tempmean} and \ref{tempquart} on page \pageref{tempmean}.
+
+
+\subsection{Effect of Temperature on Thickness}
+It would appear that increased temperature tends to result in overall lower
+thickness of the films deposited. It can be noted that increasing the
+temperature from \SI{400}{\celsius} to \SI{600}{\celsius} seems to result in a
+more significant decrease in thickness overall, compared to the difference
+between the process happening at \SI{600}{\celsius} and \SI{800}{\celsius}.
+
+\section{Summary Statistics}
+\label{sec2}
+\subsection{Mean, Std. Deviation, Variance for each Temperature Level}
+
+\begin{table}[H]
+ \centering
+ \begin{tabular}{c|c|c|c|}
+  \multirow{2}{*}{Statistics} & \multicolumn{3}{c|}{Temperature Levels (\SI{}{\celsius})}                       \\ \cline{2-4}
+                              & 400                                                       & 600      & 800      \\ \hline
+  Mean                        & 43.65                                                     & 39.7     & 39.5     \\ \hline
+  Std. Deviation              & 2.700389                                                  & 2.716421 & 2.704771 \\ \hline
+  Variance                    & 7.292105                                                  & 7.378947 & 7.315789 \\ \hline
+ \end{tabular}
+ \caption{Mean, standard deviation, and variance of the resulting film's thickness at \SI{400}{\celsius}, \SI{600}{\celsius}, and \SI{800}{\celsius}}
+ \label{tempmean}
+\end{table}
+
+When observing Table \ref{tempmean}, we can see that the mean thickness of the film goes down as the temperature
+is increased, (the change from \SI{400}{\celsius} to \SI{600}{\celsius} is more significant than the change in thickness from \SI{600}{\celsius} to \SI{800}{\celsius}) while the standard deviation seems to mostly remain the same,
+fluctuating from about 2.70-2.72.
+
+\subsection{Quartiles}
+
+\begin{table}[H]
+ \centering
+ \begin{tabular}{c|c|c|c|}
+  \multirow{2}{*}{Statistics} & \multicolumn{3}{c|}{Temperature Levels (\SI{}{\celsius})}               \\ \cline{2-4}
+                              & 400                                                       & 600   & 800 \\ \hline
+  Lower Quartile              & 42                                                        & 38    & 38  \\ \hline
+  Median                      & 44                                                        & 40    & 40  \\ \hline
+  Upper Quartile              & 45.25                                                     & 41.25 & 41  \\ \hline
+  IQR                         & 3.25                                                      & 3.25  & 3   \\ \hline
+ \end{tabular}
+ \caption{Quartile positions and the inner quartile range for the resulting film's thickness of the LPCVD process at \SI{400}{\celsius}, \SI{600}{\celsius}, and \SI{800}{\celsius}}
+ \label{tempquart}
+\end{table}
+
+Looking at Table \ref{tempquart}, each lower quartile is further from the median than their respective
+upper quartiles. This supports the conclusion that each histogram is left-skewed
+which was reached in Section \ref{Shapes} by visual inspection of the histograms.
+\subsection{Mean \& Std. Deviation of Thickness at Each Pressure Value}
+
+\begin{table}[H]
+ \centering
+ \begin{tabular}{|c|c|c|c|}
+  \hline
+  Pressure & Mean                           & Std. Deviation & Mean Change \\ \hline
+  0.25     & 45.33333                       & 2.309401       &             \\ \hline
+  0.3      & 44                             & 1.732051       & -1.33333    \\ \hline
+  0.35     & 43.33333                       & 1.527525       & -0.66667    \\ \hline
+  0.4      & 43.66667                       & 2.886751       & 0.33334     \\ \hline
+  0.45     & 42.66667                       & 2.886751       & -1          \\ \hline
+  0.5      & 43.33333                       & 3.21455        & 0.66666     \\ \hline
+  0.55     & 42                             & 1.732051       & -1.33333    \\ \hline
+  0.6      & 42                             & 2.645751       & 0           \\ \hline
+  0.65     & 41.33333                       & 2.309401       & -0.66667    \\ \hline
+  0.7      & 42                             & 2.645751       & 0.66667     \\ \hline
+  0.75     & 41.33333                       & 2.309401       & -0.66667    \\ \hline
+  0.8      & 40.66667                       & 1.154701       & -0.66666    \\ \hline
+  0.85     & 40.66667                       & 2.081666       & 0           \\ \hline
+  0.9      & 40.66667                       & 2.886751       & 0           \\ \hline
+  0.95     & 39.66667                       & 2.886751       & -1          \\ \hline
+  1        & 38.66667                       & 1.154701       & -1          \\ \hline
+  1.05     & 38.33333                       & 2.309401       & -0.33334    \\ \hline
+  1.1      & 38                             & 3.464102       & -0.33333    \\ \hline
+  1.15     & 36                             & 1.732051       & -2          \\ \hline
+  1.2      & 35.33333                       & 3.214550       & -0.66667    \\ \hline
+  % Average  &                               &                & 0.047639    \\ \hline
+  Average  & \multicolumn{3}{r|}{-0.526315}                                \\ \hline
+ \end{tabular}
+ \caption{Mean thicknesses of the films produced through the LPCVD process at varying pressures. It should be noted that this is the same data, just represented differently}
+ \label{pressurestat}
+\end{table}
+
+From Table \ref{pressurestat}, we can clearly see that as the pressure is increased,
+the overall thickness of the film deposited is decreased.
+\section{Relationships}
+
+\subsection{Thickness vs. Temperature}
+
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=\textwidth]{thiccvstemp.png}
+ \caption{Scatterplot of the film's resulting thickness at \SI{400}{\celsius}, \SI{600}{\celsius}, and \SI{800}{\celsius}}
+ \label{thiccvstemp}
+\end{figure}
+
+From Figure \ref{thiccvstemp}, we can see that higher temperatures result in
+overall lower thickness of the films deposited. This is consistent with the summaries
+obtained in Section \ref{sec2}, where same conclusion was reached by observing the summary data
+and noticing that higher temperatures seem to result in decreased thickness of the deposited films.
+
+\subsection{Thickness vs. Pressure by Temperature}
+
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=\textwidth]{thiccvspressurebytemp.png}
+ \caption{Thickness as a result of pressure and temperature scatterplot}
+ \label{thiccvspressurebytemp}
+\end{figure}
+
+
+\subsection{Relationship Between Thickness and Pressure for each Temperature Level}
+
+From Figure \ref{thiccvspressurebytemp}, we can see very clearly that as pressure
+is increased, the thickness of the film deposited decreases. At \SI{400}{\celsius},
+we can see that the resulting thickness of the film varies a bit more as the pressure
+varies, compared to \SI{600}{\celsius} and \SI{800}{\celsius}. When the temperature is
+increased to \SI{600}{\celsius} and \SI{800}{\celsius}, the resulting thicknesses were
+more consistent (the thickness does not vary as much as the pressure varies by small amounts) and lower. At pressures over about 0.9 Torr, the thickness
+of the films still go down as the pressure increases, but increasing the temperature from
+\SI{600}{\celsius} to \SI{800}{\celsius} does not seem to decrease the thickness by much.
+
+\section{How should the temperature and pressure be selected to produce the thinnest possible film for the LPCVD process?}
+
+From Figures \ref{thicc400}, \ref{thicc600}, and \ref{thicc800} we can see that
+as the temperature is increased, the thickness of the film decreases, evidenced
+by the bulk of the data shifting left in the histograms as the temperature
+increases. By observing Tables \ref{tempmean} and \ref{tempquart}, we can see
+that the mean and median averages for thickness also decrease as the temperature
+is increased. We can also see this effect in Figure \ref{thiccvspressurebytemp},
+where the effect is evidenced by the higher temperature lines
+(\SI{600}{\celsius} \& \SI{800}{\celsius}) being lower than the
+\SI{400}{\celsius} line. Next, when looking at the effect of pressure on the
+thickness of the film deposited, we can see that in Table \ref{pressurestat},
+the mean thickness decreases when the pressure is increased. This effect is also
+seen in Figure \ref{thiccvspressurebytemp}, indicated by the negative slope of
+each line. Therefore, in order to produce the thinnest possible film for the
+LPCVD process, high pressure and temperature is desireable. It can be noted
+however, that there may be diminishing returns as higher temperature and
+pressure is used. For example, In Figures \ref{thicc400}, \ref{thicc600}, and
+\ref{thicc800}, there is a more significant decrease in thickness by increasing
+the temperature from \SI{400}{\celsius} to \SI{600}{\celsius} compared to the
+decrease in thickness by increasing the temperature from \SI{600}{\celsius}
+and \SI{800}{\celsius}.
+
+\end{document}
