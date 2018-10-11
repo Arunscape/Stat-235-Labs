@@ -94,7 +94,7 @@ decrease and the fraction above 295 to increase.
 %  \label{}
 % \end{figure}
 
-\section{How changes in the Mean and Std. Deviation affect the fraction of alloy slabs that do not meet the TS Specifications} %2
+\section{} %2
 % #2
 % use the normal probablities sheet
 
@@ -111,7 +111,7 @@ decrease and the fraction above 295 to increase.
                       &                                           & Strength exceeded by 99\%                          & 273.37      \\ \hline
   e)                  & $\mu=285$                                 & $\sigma$ so that 1\% have $TS < 275$ or $TS > 295$ & 3.88        \\ \hline
  \end{tabular}
- \caption{My caption}
+ \caption{How changes in the Mean and Std. Deviation affect the fraction of alloy slabs that do not meet the TS Specifications}
  \label{q2}
 \end{table}
 
@@ -131,26 +131,44 @@ consistent with the theoretical value.
 %table
 % what is the 68-95--99.7 rule?
 % are the generated random numbers consitent with this rule?
-The generated random numbers should be consistent with the 68-95-99.7 rule.
+
+
+% \begin{table}[H]
+%  \centering
+%  \begin{tabular}{|c|c|c|c|}
+%   \hline
+%   \textbf{k} & \textbf{Within k Std. Deviations of the mean $\mu=285$} & \textbf{Frequency} & \textbf{Relative Frequency} \\ \hline
+%   1          & (279.6167494,289.8374972)                               & 129                & 0.645                       \\\hline
+%   2          & (274.5063754,294.9478711)                               & 195                & 0.975                       \\ \hline
+%   3          & (269.3960015,300.0582451)                               & 199                & 0.995                       \\ \hline
+%  \end{tabular}
+%  \caption{My caption}
+%  \label{my-label}
+% \end{table}
+%
+% \textbf{OR DO WE DO IT THIS WAY}
 
 \begin{table}[H]
  \centering
  \begin{tabular}{|c|c|c|c|}
   \hline
   \textbf{k} & \textbf{Within k Std. Deviations of the mean $\mu=285$} & \textbf{Frequency} & \textbf{Relative Frequency} \\ \hline
-  1          & (0,0)                                                   & 0                  & 0                           \\ \hline
-  2          & (0,0)                                                   & 0                  & 0                           \\ \hline
-  3          & (0,0)                                                   & 0                  & 0                           \\ \hline
+  1          & (280, 290)                                              & 130                & 0.65                        \\\hline
+  2          & (275, 295)                                              & 190                & 0.95                        \\ \hline
+  3          & (270, 300)                                              & 199                & 0.995                       \\ \hline
  \end{tabular}
  \caption{My caption}
- \label{my-label}
+ \label{q3}
 \end{table}
+
+With relative frequencies of 65\%, 95\%, and 99.5\%, we clearly see that the
+data above is consistent with the 68-95-99.7 rule.
 
 \subsection{} % distribution of the standardized values?
 %3c
 It's a normalized standard distibution. -- \textbf{Do I need a number here??}
 
-\\ k this is my answer for now:
+k this is my answer for now:
 According to the theory, standardizing the values should result in a standard normal distribution.
 In practice, we observe a distribution that approximates a standard normal distribution.
 
