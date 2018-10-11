@@ -101,18 +101,18 @@ decrease and the fraction above 295 to increase.
 \begin{table}[H]
  \centering
  \begin{tabular}{c|c|c|c|}
-                      & Parameters                                & Problem                                            & Answer \\ \hline
-  \multirow{2}{*}{a)} & $\mu=285$ and $\sigma=5$                  & Fraction of unacceptable                           & 0      \\ \cline{2-4}
-                      & $\mu=283$ and $\sigma=5$                  & Fraction of unacceptable                           & 0      \\ \hline
-  b)                  & $\mu=285$ and $\sigma=6$                  & Fraction of unacceptable                           & 0      \\ \hline
-  \multirow{2}{*}{c)} & \multirow{2}{*}{$\mu=285$ and $\sigma=5$} & Within 1 std. deviation                            & 0      \\ \cline{3-4}
-                      &                                           & Within 2 std. deviations                           & 0      \\ \hline
-  \multirow{2}{*}{d)} & \multirow{2}{*}{$\mu=285$ and $\sigma=5$} & Strength exceeded by 95\%                          & 0      \\ \cline{3-4}
-                      &                                           & Strength exceeded by 99\%                          & 0      \\ \hline
-  e)                  & $\mu=285$                                 & $\sigma$ so that 1\% have $TS < 275$ or $TS > 295$ & 0      \\ \hline
+                      & Parameters                                & Problem                                            & Answer      \\ \hline
+  \multirow{2}{*}{a)} & $\mu=285$ and $\sigma=5$                  & Fraction of unacceptable                           & 0.045500264 \\ \cline{2-4}
+                      & $\mu=283$ and $\sigma=5$                  & Fraction of unacceptable                           & 0.062996828 \\ \hline
+  b)                  & $\mu=285$ and $\sigma=6$                  & Fraction of unacceptable                           & 0.095580705 \\ \hline
+  \multirow{2}{*}{c)} & \multirow{2}{*}{$\mu=285$ and $\sigma=5$} & Within 1 std. deviation                            & 0.6827      \\ \cline{3-4}
+                      &                                           & Within 2 std. deviations                           & 0.9545      \\ \hline
+  \multirow{2}{*}{d)} & \multirow{2}{*}{$\mu=285$ and $\sigma=5$} & Strength exceeded by 95\%                          & 276.78      \\ \cline{3-4}
+                      &                                           & Strength exceeded by 99\%                          & 273.37      \\ \hline
+  e)                  & $\mu=285$                                 & $\sigma$ so that 1\% have $TS < 275$ or $TS > 295$ & 3.88        \\ \hline
  \end{tabular}
  \caption{My caption}
- \label{my-label}
+ \label{q2}
 \end{table}
 
 \section{Random Number Generator} %3
@@ -120,9 +120,11 @@ decrease and the fraction above 295 to increase.
 \subsection{} %generate the random numbers
 %3a
 % number of unacceptable slabs?
-I got 10 for the number of unacceptable slabs.
+From the randomly generated data, the number of unacceptable slabs is 10.
 % consistency with #2a?
-Idk if this is consistent because I haven't done \#2 yet
+$$ {fraction\ unacceptable = \frac{10}{200} = 0.05} $$ 0.05 is reasonably close
+to the value 0.045500264, obtained from 2 a) in Table \ref{q2}, so it is
+consistent with the theoretical value.
 
 \subsection{}
 %3b
@@ -148,6 +150,10 @@ The generated random numbers should be consistent with the 68-95-99.7 rule.
 %3c
 It's a normalized standard distibution. -- \textbf{Do I need a number here??}
 
+\\ k this is my answer for now:
+According to the theory, standardizing the values should result in a standard normal distribution.
+In practice, we observe a distribution that approximates a standard normal distribution.
+
 \subsection{} % use data analysis -> descriptive statistics tool
 %3d
 % mean and std deviation fo the standardized values?
@@ -155,8 +161,11 @@ It's a normalized standard distibution. -- \textbf{Do I need a number here??}
 Using the \textit{Descriptive Statistics Tool}, we find the following from the standardized values:
 % $${mean} = -0.0545753437108942$$
 % $${std.\ deviation} = 1.02207478598467$$
-$${mean} = -0.0546$$
-$${std.\ deviation} = 1.0221$$
+$$\mu = -0.0546$$
+$$\sigma = 1.0221$$
+In theory, a standard normal distibution has $\mu=0$, and $\sigma=1$. The values
+obtained here are quite close to the expected distribution parameters of a
+standard normal distribution, so these values are consistent with the theory.
 
 \section{Changes in Manufacturing Process}%4
 
