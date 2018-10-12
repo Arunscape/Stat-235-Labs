@@ -170,7 +170,9 @@ data above is consistent with the 68-95-99.7 rule.
 
 % k this is my answer for now:
 According to the theory, standardizing the values should result in a standard normal distribution.
+By standardizing these values, we are essentially doing a linear transformation.
 In practice, we observe a distribution that approximates a standard normal distribution.
+
 
 \subsection{} % use data analysis -> descriptive statistics tool
 %3d
@@ -207,9 +209,11 @@ as the values are fairly close, being off by less than a value of 1.
  \label{histogram}
 \end{figure}
 
-The histogram above appears to be an approximately symmetric, normal distribution.
-There are no glaring indicators which would point to the data not following
-a normal distribution.
+The histogram above appears to be an approximately symmetric, unimodal normal
+distribution. There are no glaring indicators which would point to the data not
+following a normal distribution. Maybe there is a very slight right skew, but
+this does not look visually significant, since some randomness is introduced by
+taking a sample.
 
 \subsection{} %use the normal probablities sheet
 %4c
@@ -243,6 +247,9 @@ Using the \textit{Binomial Probabilities} worksheet, we obtain the following:
   p        & 0.05   \\ \hline
   $P(X>x)$ & 0.0444 \\ \hline
  \end{tabular}
+ \caption{Probability of obtaining more than 15 unacceptable slabs
+  in a random sample of 200 provided the true fraction of unacceptable slabs does not
+  exceed 0.05}
 \end{table}
 
 \subsection{} % use the binomial probablities sheet.
@@ -262,6 +269,8 @@ Using the \textit{Binomial Probabilities} worksheet, and the \textit{Normal
   p        & $1-0.9545=0.0455$ \\ \hline
   $P(X>x)$ & 0.0213            \\ \hline
  \end{tabular}
+ \caption{Probability that more than 15 unacceptable slabs
+  (TS below 275 or above 295) will be obtained in a random sample of 200 slabs with $\mu=285$ and $\sigma=5$}
 \end{table}
 
 
