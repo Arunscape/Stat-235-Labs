@@ -216,10 +216,14 @@ a normal distribution.
 % can the manufacturer reach the goal of less than 5% unacceptable?
 No. Assuming normality and large sample size, with $\mu = 284.6889205$ and
 $\sigma = 5.82582628$, we find that 8.65\% of the slabs produced are
-unacceptable, which is still above 5\%.
+unacceptable, which is above the 5\% limit of unacceptable slabs.
 
 \subsection{} % summarize your findings on TS. Are the changes acceptable?
 %4d
+The new manufacturing process has slightly lowered the mean tensile strength.
+Also, the standard deviation has increased a bit, which may suggest that the new
+manufacturing process is slightly less consistent. These changes did not seem to
+affect the normality of the distribution in any significant way.
 
 \section{Binomial Probabilities}
 %5
@@ -228,6 +232,16 @@ unacceptable, which is still above 5\%.
 %5a
 % parameters of the distibution?
 % binomial probability?
+\begin{table}[H]
+ \centering
+ \begin{tabular}{|l|l|}
+  \hline
+  n        & 200    \\ \hline
+  x        & 15     \\ \hline
+  p        & 0.05   \\ \hline
+  $P(X>x)$ & 0.0444 \\ \hline
+ \end{tabular}
+\end{table}
 
 \subsection{} % use the binomial probablities sheet.
 %5b
@@ -235,6 +249,16 @@ unacceptable, which is still above 5\%.
 % (the value of p calculated with the normal probablities sheeet)
 % binomial probability?
 
+\begin{table}[H]
+ \centering
+ \begin{tabular}{|l|l|}
+  \hline
+  n        & 200               \\ \hline
+  x        & 15                \\ \hline
+  p        & $1-0.9545=0.0455$ \\ \hline
+  $P(X>x)$ & 0.0213            \\ \hline
+ \end{tabular}
+\end{table}
 
 
 
