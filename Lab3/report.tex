@@ -27,6 +27,10 @@
 % make subsection use letters
 \renewcommand{\thesubsection}{\thesection.\alph{subsection}}
 
+
+\usepackage{amsthm}
+\newtheorem*{clt}{Central Limit Theorem}
+
 %actual document
 \begin{document}
 
@@ -102,18 +106,58 @@ a defective panel is approximately $0.389$.
 
 
 \section{}%3
+From in-class notes, the Central Limit Theorem states the following:
+\begin{clt}
+ When $n$ is sufficiently large, the sampling distibution of $\bar{x}$ is well
+ approximated by a normal curve, even when the population distibution is not
+ itself normal. The Central Limit Theorem can safely be applied if $n$ is at
+ least 30.
+\end{clt}
 
+Note: For Question 3, $\lambda=0.5$
 \subsection{}%3a
 % Use the normal probabilities sheet
 % Why can't we assume that the distribution of the sample mean is normal?
 % (Think sample size, central limit theorem)
 % Find the variance and mean to get probability
+Referring to the Central Limit Theorem as defined above, we cannot safely assume
+that the sampling distribution of the average number of flaws in a random sample
+of 10 panels follows approximately a normal distribution. The Central Limit
+Theorem states that it can only be safely applied when the sample size is
+greater than or equal to 30.
+
+If we were to assume that the Central Limit Theorem does apply, however, the
+probability that the average number of flaws in a random sample of 10 panels
+does not exceed 0.3 is found as follows:
+
+$$\sigma^2 = \lambda \Rightarrow
+ \sigma = \sqrt{\lambda} = \sqrt{0.5} = \frac{1}{\sqrt{2}} $$
+
+$$\Rightarrow \sigma_{\bar{x}} = \frac{\sigma}{\sqrt{n}} =
+ \frac{1/\sqrt{2}}{\sqrt{10}} = \frac{1}{\sqrt{20}} \approx 0.2236 $$
+
+Plugging in $\lambda$, and $\sigma_{\bar{x}}$ into the \textit{Normal Probabilities Sheet},
+we find that $P(X \leq 0.30) = 0.1855$.
 
 \subsection{}%3b
 % Use the normal probabilities sheet
 % Why can't we assume that the distribution of the sample mean is normal?
 % (Think sample size, central limit theorem)
 % Find the variance and mean to get probability
+We can safely assume that the sampling distribution of the average number of
+flaws in a random sample of 30 panels follows approximately a normal
+distribution, because a sample size of 30 satisfies the condition in the Central
+Limit Theorem which requires a sample size greater than or equal to 30.
+
+Assuming that the Central Limit Theorem does applies, the
+probability that the average number of flaws in a random sample of 30 panels
+does not exceed 0.3 is found as follows:
+
+$$\sigma_{\bar{x}} = \frac{\sigma}{\sqrt{n}} =
+ \frac{1/\sqrt{2}}{\sqrt{30}} = \frac{1}{\sqrt{60}} \approx 0.129 $$
+
+Plugging in $\lambda$, and $\sigma_{\bar{x}}$ into the \textit{Normal Probabilities Sheet},
+we find that $P(X \leq 0.30) = 0.0607$.
 
 \section{}%4
 % DO NOT CHANGE THE FORMULAS IN THE ROWS AVERAGE, COUNT, AVERAGE summary statistics
