@@ -65,12 +65,15 @@
 % How does change in lambda affect shape of graph?
 % How does the increase affect the quality/number of flaws?
 As $\lambda$ increases, the distribution shifts to the right, since $\lambda$ is
-the mean value of the distribution. We also see that as this distibution shifts
+the mean value of the distribution. We also see that as this distribution shifts
 to the right, the curve flattens as a result of the mean probability decreasing
-while the spread increases. Since Poisson distributions measure the number of
-successes in an interval, and in this case a ``success'' is a flaw in a plastic
-panel, we can clearly see that as $\lambda$ increases, the number of flaws in
-the plastic panels also increase.
+while the spread increases (Since the total area under this distribution is 1).
+Since Poisson distributions measure the number of successes in an interval, and
+in this case a ``success'' is a flaw in a plastic panel, we can clearly see that
+for manufacturing processes with higher $\lambda$, the variability of the panels
+produced increases. This means that we will see slightly more panels with flaws,
+slightly more panels with less flaws, and less panels with the expected
+($\lambda$) number of flaws.
 
 \section{}%2
 
@@ -169,25 +172,31 @@ we find that $P(X \leq 0.30) = 0.0607$.
 % Random number generation -> #variables=60 -> randomvars=10
 % -> distribution=Poisson -> seed=100 -> lambda=COUNTIF()
 Using the built in COUNTIF function, we find the number of perfect panels to be
-382. So, the percentage of perfect panels can be found as follows:
-$$\frac{362}{600}\times 100 = 0.60333333...\%$$
+362. So, the percentage of perfect panels can be found as follows:
+$$\frac{362}{600}\times 100 = 60.333333333...\%$$
 Therefore, about $60.33\%$ of the panels are in perfect condition. Compared with
-the value obtained in \ref{2a} ($60.65\%$), it is pretty close. However, it
-would be unrealistic to expect that these two values are identical, since the
-value obtained in \ref{2a} is a theoretical value for an infinite number of
-trials, while the number obtained here is for a finite amount of plastic panels.
+the value obtained in \ref{2a} ($60.65\%$), it is pretty close. We expect these
+values to be close, because the random data is based on the same distribution as
+in \ref{2a}. However, it would be unrealistic to expect that these two values
+are exactly the same, since the value obtained in \ref{2a} is a theoretical
+value for an infinite number of trials, while the number obtained here is from
+random data representing a finite number of plastic panels.
 
 
 \subsection{}%4b
 % count will be in row 42 if you generated the data correctly
-Using the built in COUNTIF function, we find the number of non defective panels to be
-230. So, the percentage of perfect panels can be found as follows:
-$$\frac{230}{600}\times 100 = 0.38333333...\%$$
-Therefore, about $38.33\%$ of the panels are not defective. Compared with
-the value obtained in \ref{2c} ($38.86\%$), it is pretty close. However, it
-would be unrealistic to expect that these two values are identical, since the
-value obtained in \ref{2c} is a theoretical value for an infinite number of
-trials, while the number obtained here is for a finite amount of plastic panels.
+Using the built in COUNTIF function, we find the number of samples with non
+defective panels to be 23 So, the percentage of non defective panels can be
+found as follows:
+$$\frac{23}{60}\times 100 = 38.333333333\%$$
+Therefore, about $38.33\%$ of the panels are not defective. Compared with the
+value obtained in \ref{2c} ($38.86\%$), it is pretty close. We expect these
+values to be close, because the random data is based on the same distribution as
+in \ref{2c}. However, it would be unrealistic to expect that these two values
+are exactly the same, due to the randomness of the generated data. Also, the
+value obtained in \ref{2c} is a theoretical value for a sample of 10 from an
+infinite number of panels, while we are obtaining samples from 600 randomly
+generated panels.
 
 \subsection{}%4c
 % Don't over analyze, use squint test
