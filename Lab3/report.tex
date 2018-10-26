@@ -125,6 +125,7 @@ Note: For Question 3, $\lambda=0.5$
 % Why can't we assume that the distribution of the sample mean is normal?
 % (Think sample size, central limit theorem)
 % Find the variance and mean to get probability
+\label{3a}
 Referring to the Central Limit Theorem as defined above, we cannot safely assume
 that the sampling distribution of the average number of flaws in a random sample
 of 10 panels follows approximately a normal distribution. The Central Limit
@@ -205,14 +206,28 @@ generated panels.
 \begin{figure}[H]
  \centering
  \includegraphics[width=\textwidth]{q4.png}
- \caption{INSERT CAPTION HERE}
+ \caption{Average number of flaws in samples of 10 panels from 600 plastic panels.}
  \label{4c}
 \end{figure}
+
+The histogram above does not seem to resemble a normal distribution. When taking
+a step back and looking at the overall shape, it appears to be bimodal with the
+first peak being between 0.3-0.4 and the second peak being between 0.6-0.7.
 
 \subsection{}%4d
 % Summary statistics calculated automatically.
 % Are the predicted values close?
 % If they aren't perfect, why not?
+From the automatically computed summary statistics in the \textit{Simulation}
+worksheet, we find the mean and standard deviation of the average number of
+flaws for the 60 samples to be: ($\mu=0.506666667,
+ \sigma_{\bar{x}}=0.242771195$). In \ref{3a}, we found the theoretical values to
+be ($\lambda=\mu=0.5, \sigma_{\bar{x}}=0.2236$). These values aren't the exact
+same, but they are really close. We expected these values to be close, however,
+it would be unrealistic for them to be exactly the same, due to the randomness
+of the data, and also because we are taking samples from 600 randomly generated
+panels while the theoretical value is from taking samples from an infinite
+number of panels.
 
 \section{}%5
 
