@@ -113,8 +113,8 @@ a defective panel is approximately $0.389$.
 \section{}%3
 From in-class notes, the Central Limit Theorem states the following:
 \begin{clt}
- When $n$ is sufficiently large, the sampling distibution of $\bar{x}$ is well
- approximated by a normal curve, even when the population distibution is not
+ When $n$ is sufficiently large, the sampling distribution of $\bar{x}$ is well
+ approximated by a normal curve, even when the population distribution is not
  itself normal. The Central Limit Theorem can safely be applied if $n$ is at
  least 30.
 \end{clt}
@@ -150,6 +150,8 @@ we find that $P(X \leq 0.30) = 0.1855$.
 % Why can't we assume that the distribution of the sample mean is normal?
 % (Think sample size, central limit theorem)
 % Find the variance and mean to get probability
+
+\label{3b}
 We can safely assume that the sampling distribution of the average number of
 flaws in a random sample of 30 panels follows approximately a normal
 distribution, because a sample size of 30 satisfies the condition in the Central
@@ -165,7 +167,7 @@ $$\sigma_{\bar{x}} = \frac{\sigma}{\sqrt{n}} =
 Plugging in $\lambda$, and $\sigma_{\bar{x}}$ into the \textit{Normal Probabilities Sheet},
 we find that $P(X \leq 0.30) = 0.0607$.
 
-\section{CHECK TO SEE IF YOUR RANDOM NUMBERS ARE GOOD}%4
+\section{}%4
 % DO NOT CHANGE THE FORMULAS IN THE ROWS AVERAGE, COUNT, AVERAGE summary statistics
 
 \subsection{}%4a
@@ -189,7 +191,7 @@ random data representing a finite number of plastic panels.
 Using the built in COUNTIF function, we find the number of samples with non
 defective panels to be 23 So, the percentage of non defective panels can be
 found as follows:
-$$\frac{23}{60}\times 100 = 38.333333333\%$$
+$$\frac{23}{60}\times 100 = 38.333333333...\%$$
 Therefore, about $38.33\%$ of the panels are not defective. Compared with the
 value obtained in \ref{2c} ($38.86\%$), it is pretty close. We expect these
 values to be close, because the random data is based on the same distribution as
@@ -210,24 +212,30 @@ generated panels.
  \label{4c}
 \end{figure}
 
-The histogram above does not seem to resemble a normal distribution. When taking
-a step back and looking at the overall shape, it appears to be bimodal with the
-first peak being between 0.3-0.4 and the second peak being between 0.6-0.7.
+The histogram above is a bit funky, and does not seem to resemble a normal
+distribution.  This makes sense, because the Central Limit Theorem makes no
+guarantees that sample sizes less than 30  (10 in this case) will approximate a
+normal curve. When taking a step back and looking at the overall shape, it
+appears to be bimodal with the first peak being between 0.3-0.4 and the second
+peak being between 0.6-0.7 .
 
 \subsection{}%4d
 % Summary statistics calculated automatically.
 % Are the predicted values close?
 % If they aren't perfect, why not?
+
+\label{4d}
 From the automatically computed summary statistics in the \textit{Simulation}
 worksheet, we find the mean and standard deviation of the average number of
 flaws for the 60 samples to be: ($\mu=0.506666667,
  \sigma_{\bar{x}}=0.242771195$). In \ref{3a}, we found the theoretical values to
-be ($\lambda=\mu=0.5, \sigma_{\bar{x}}=0.2236$). These values aren't the exact
-same, but they are really close. We expected these values to be close, however,
-it would be unrealistic for them to be exactly the same, due to the randomness
-of the data, and also because we are taking samples from 600 randomly generated
-panels while the theoretical value is from taking samples from an infinite
-number of panels.
+be ($\lambda=\mu=0.5, \sigma_{\bar{x}}=0.2236$). These values are reasonably
+close, but we would expect them to be even closer with a larger sample size
+($\geq 30$) due to the Central Limit Theorem. Even though we expect these values
+to be close, it would be unrealistic for them to be exactly the same, due to the
+randomness of the data, and also because we are taking samples from 600 randomly
+generated panels while the theoretical value is from taking samples from an
+infinite number of panels.
 
 \section{}%5
 
@@ -239,12 +247,40 @@ number of panels.
 \begin{figure}[H]
  \centering
  \includegraphics[width=\textwidth]{q5.png}
- \caption{INSERT CAPTION HERE}
+ \caption{Average number of flaws in samples of 30 panels from 1800 plastic panels.}
  \label{5a}
 \end{figure}
 
+Unlike the histogram in \ref{4c}, the histogram above appears to resemble a normal
+distribution. This makes sense, because the Central Limit Theorem guarantees
+that sample greater than or equal to 30 will approximate a
+normal curve, and we are picking samples with 30 panels. Compared to
+\ref{4c}, where the sample size was 10, we saw that the resulting histogram
+did not look normal at all, while the histogram where the sample size was 30
+is clearly unimodal, and visually symmetric like a normal distribution.
+
 \subsection{}%5b
 % Why is this estimate better/worse?
+
+From the automatically computed summary statistics in the \textit{Simulation}
+worksheet, we find the mean and standard deviation of the average number of
+flaws for the 60 samples to be: ($\mu=0.502222222,
+ \sigma_{\bar{x}}=0.119141099$). In \ref{3b}, we found the theoretical values to
+be ($\lambda=\mu=0.5, \sigma_{\bar{x}}=0.129$). These values are also reasonably
+close, and are actually even closer to each other compared to \ref{4d}. This
+makes sense, because the Central Limit Theorem states that sample sizes greater
+than  or equal to 30 should approximate a normal curve. Even though we expect
+these values to be close, it would be unrealistic for them to be exactly the
+same, due to the randomness of the data, and also because we are taking samples
+from 1800 randomly generated panels while the theoretical value is from taking
+samples from an infinite number of panels. Compared to \ref{4d}, this estimate
+seems better, since the experimental values obtained are closer to the
+theoretical values.  This is so, because according to the Central Limit Theorem,
+the sample distributions should approximate a normal curve with large enough
+sample size ($\geq30$). In \ref{4d} the sample size was smaller, and it did not
+satisfy the Central Limit Theorem, while here, we have a bigger sample size
+which does satisfy the Central Limit Theorem, so naturally the estimate here
+would be better than in \ref{4d}.
 
 
 \end{document}
