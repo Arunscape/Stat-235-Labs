@@ -189,7 +189,7 @@ random data representing a finite number of plastic panels.
 \subsection{}%4b
 % count will be in row 42 if you generated the data correctly
 Using the built in COUNTIF function, we find the number of samples with non
-defective panels to be 23 So, the percentage of non defective panels can be
+defective panels to be 23. So, the percentage of non defective panels can be
 found as follows:
 $$\frac{23}{60}\times 100 = 38.333333333...\%$$
 Therefore, about $38.33\%$ of the panels are not defective. Compared with the
@@ -204,12 +204,12 @@ generated panels.
 \subsection{}%4c
 % Don't over analyze, use squint test
 % What's going on between 0.3 and 0.7?
-
+\label{4c}
 \begin{figure}[H]
  \centering
  \includegraphics[width=\textwidth]{q4.png}
  \caption{Average number of flaws in samples of 10 panels from 600 plastic panels.}
- \label{4c}
+ 
 \end{figure}
 
 The histogram above is a bit funky, and does not seem to resemble a normal
@@ -217,7 +217,8 @@ distribution.  This makes sense, because the Central Limit Theorem makes no
 guarantees that sample sizes less than 30  (10 in this case) will approximate a
 normal curve. When taking a step back and looking at the overall shape, it
 appears to be bimodal with the first peak being between 0.3-0.4 and the second
-peak being between 0.6-0.7 .
+peak being between 0.6-0.7, however there is only one bin between these two
+apparent peaks, so this could also be attributed to the randomness in the data.
 
 \subsection{}%4d
 % Summary statistics calculated automatically.
