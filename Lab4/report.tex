@@ -29,11 +29,11 @@
 \pagestyle{fancy}
 
 % make subsection use letters
-\renewcommand{\thesubsection}{\thesection.\alph{subsection}}
+\renewcommand{\thesubsection}{\thesection\ \alph{subsection})}
 
 
-\usepackage{amsthm}
-\newtheorem*{clt}{Central Limit Theorem}
+% \usepackage{amsthm}
+% \newtheorem*{clt}{Central Limit Theorem}
 
 %actual document
 \begin{document}
@@ -312,11 +312,11 @@ Output: Change in strength vs Scatter plot of Alloy 2 strength.
 Remember to put the response on the y-axis. All relationships have
 error, look at the middle data cloud to determine shape.
 
-% \begin{figure}[H]
-%  \centering
-%  \includegraphics[width=\textwidth]{q5.png}
-%  \caption{Average number of flaws in samples of 30 panels from 1800 plastic panels.}
-%  \label{5a}
-% \end{figure}
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=\textwidth]{q6.png}
+ \caption{My caption}
+ \label{q6}
+\end{figure}
 
 \end{document}
