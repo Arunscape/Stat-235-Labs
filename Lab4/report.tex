@@ -18,6 +18,7 @@
 
 \usepackage{tabularx}
 % allows for linewrap within cells
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
 
 \usepackage{fancyhdr} %header
 \fancyhf{}
@@ -89,7 +90,7 @@ Confidence Level is increased. This makes sense because............
 
 \begin{table}[H]
  \centering
- \begin{tabularx}{\textwidth}{|c|X|}
+ \begin{tabularx}{\textwidth}{|c|Y|}
   \hline
   Confidence Level & Observed Fraction of Intervals That Failed to Cover the Hypothesized Population Mean \\ \hline
   0.90             & 0.11                                                                                 \\ \hline
@@ -111,7 +112,7 @@ $$ H_0: \mu=64 \quad vs. \quad H_A: \mu \neq 64 $$
 
 \begin{table}[H]
  \centering
- \begin{tabularx}{\textwidth}{|X|X|X|}
+ \begin{tabularx}{\textwidth}{|Y|Y|Y|}
   \hline
   Level of Significance & Number of Samples That Led to the Rejection of $H_0$ & Observed Fraction of Samples \\ \hline
   0.10                  & XXXX                                                 & XXXX                         \\ \hline
@@ -133,7 +134,79 @@ Compare the outcome of the test at the 5\% level of significance with the 95\% c
 that failed to cover the mean of 64 for each sample. Repeat the exercise with the 1\% level of
 significance and the 99\% confidence intervals. What do you conclude about the relationship
 between confidence intervals and two-sided tests?
+
 \section{}%3
+
+\begin{table}[H]
+ \centering
+ \begin{tabular}{|c|c|}
+  \hline
+  \multicolumn{2}{|c|}{Alloy 1}          \\ \hline
+  Mean                     & 65.09       \\ \hline
+  Standard Error           & 0.360980466 \\ \hline
+  Median                   & 64.6        \\ \hline
+  Mode                     & 63.8        \\ \hline
+  Standard Deviation       & 1.977171438 \\ \hline
+  Sample Variance          & 3.909206897 \\ \hline
+  Kurtosis                 & 0.042639157 \\ \hline
+  Skewness                 & 0.718164135 \\ \hline
+  Range                    & 8.2         \\ \hline
+  Minimum                  & 61.7        \\ \hline
+  Maximum                  & 69.9        \\ \hline
+  Sum                      & 1952.7      \\ \hline
+  Count                    & 30          \\ \hline
+  Confidence Level(95.0\%) & 0.738287948 \\ \hline
+ \end{tabular}
+ \caption{My caption}
+ \label{3a1}
+\end{table}
+
+\begin{table}[H]
+ \centering
+ \begin{tabular}{|c|c|}
+  \hline  \multicolumn{2}{|c|}{Alloy 2}  \\ \hline
+  Mean                     & 65.27333333 \\ \hline
+  Standard Error           & 0.167601973 \\ \hline
+  Median                   & 65          \\ \hline
+  Mode                     & 64.9        \\ \hline
+  Standard Deviation       & 0.917993815 \\ \hline
+  Sample Variance          & 0.842712644 \\ \hline
+  Kurtosis                 & 9.565960304 \\ \hline
+  Skewness                 & 2.914366915 \\ \hline
+  Range                    & 4.5         \\ \hline
+  Minimum                  & 64.5        \\ \hline
+  Maximum                  & 69          \\ \hline
+  Sum                      & 1958.2      \\ \hline
+  Count                    & 30          \\ \hline
+  Confidence Level(95.0\%) & 0.342784524 \\ \hline
+ \end{tabular}
+ \caption{My caption}
+ \label{3a2}
+\end{table}
+
+\begin{table}[H]
+ \centering
+ \begin{tabular}{|c|c|}
+  \hline
+  \multicolumn{2}{|c|}{Alloy 2 + Treatment} \\ \hline
+  Mean                     & 66.82333333    \\ \hline
+  Standard Error           & 0.108350573    \\ \hline
+  Median                   & 66.75          \\ \hline
+  Mode                     & 66.9           \\ \hline
+  Standard Deviation       & 0.593460531    \\ \hline
+  Sample Variance          & 0.352195402    \\ \hline
+  Kurtosis                 & 7.169408133    \\ \hline
+  Skewness                 & 2.210176389    \\ \hline
+  Range                    & 3.1            \\ \hline
+  Minimum                  & 66             \\ \hline
+  Maximum                  & 69.1           \\ \hline
+  Sum                      & 2004.7         \\ \hline
+  Count                    & 30             \\ \hline
+  Confidence Level(95.0\%) & 0.221601804    \\ \hline
+ \end{tabular}
+ \caption{My caption}
+ \label{3a3}
+\end{table}
 
 \subsection{}%3a
 
