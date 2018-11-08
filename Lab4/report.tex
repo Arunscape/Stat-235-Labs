@@ -16,6 +16,9 @@
 \usepackage{multirow}
 % for merging table cells I think
 
+\usepackage{tabularx}
+% allows for linewrap within cells
+
 \usepackage{fancyhdr} %header
 \fancyhf{}
 \fancyhead[R]{Arun Woosaree XXXXXXX}
@@ -63,9 +66,43 @@
 \section{}%1
 
 \subsection{}%1a
+Keeping other parameters constant, changing the confidence level yields the folowing:
+\begin{table}[H]
+ \centering
+ \begin{tabular}{|c|c|}
+  \hline
+  Confidence Level & Margin of Error \\ \hline
+  0.90             & 0.300308        \\ \hline
+  0.95             & 0.357839        \\ \hline
+  0.99             & 0.470280        \\ \hline
+ \end{tabular}
+ \caption{My caption}
+ \label{1a}
+\end{table}
+How does the margin of
+error change as the confidence interval increases? Explain briefly.
+As seen in Table \ref{1a} above, the Margin of Error increases as the
+Confidence Level is increased. This makes sense because............
+
 
 \subsection{}%1b
 
+\begin{table}[H]
+ \centering
+ \begin{tabularx}{\textwidth}{|c|X|}
+  \hline
+  Confidence Level & Observed Fraction of Intervals That Failed to Cover the Hypothesized Population Mean \\ \hline
+  0.90             & 0.11                                                                                 \\ \hline
+  0.95             & 0.06                                                                                 \\ \hline
+  0.99             & 0.02                                                                                 \\ \hline
+ \end{tabularx}
+ \caption{My caption}
+ \label{1b}
+\end{table}
+
+Are the observed counts consistent with the values predicted
+by the theory? Explain briefly.
+looks like you got some learnin to do....
 \section{}%2
 
 \subsection{}%2a
