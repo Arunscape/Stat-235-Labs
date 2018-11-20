@@ -154,14 +154,24 @@ increase, which would increase the total fraction of samples rejected.
 % relationship between the C.I. and alpha (⍺) as an equation.
 
 \subsubsection*{90\% confidence interval null hypothesis}
-90 \% of the time, the population mean is 64 ksi.
+The 90\% confidence interval is calculated as follows:
+$$64 \pm 0.300308 = (63.699692, 64.300308)$$
+Thus, the null hypothesis is:
+$$H_0: \mu \in (63.699692, 64.300308)$$
 
 \subsubsection*{95\% confidence interval null hypothesis}
-95 \% of the time, the population mean is 64 ksi.
+The 95\% confidence interval is calculated as follows:
+$$64 \pm 0.357839 = (63.642161, 64.357839)$$
+Thus, the null hypothesis is:
+$$H_0: \mu \in (63.642161, 64.357839)$$
 
 \subsubsection*{99\% confidence interval null hypothesis}
-99 \% of the time, the population mean is 64 ksi.
+The 95\% confidence interval is calculated as follows:
+$$64 \pm 0.470280 = (63.52972, 64047028)$$
+Thus, the null hypothesis is:
+$$H_0: \mu \in (63.52972, 64047028)$$
 
+\subsubsection*{When is the null hypothesis rejected?}
 The null hypothesis $H_0$ is rejected when the test statistic
 does not fall within the confidence interval with significance $\alpha$.
 The confidence interval is calculated as the mean $\pm$ the confidence level $1-\alpha$
