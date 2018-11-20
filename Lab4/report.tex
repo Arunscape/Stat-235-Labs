@@ -261,21 +261,21 @@ intervals, the lower bound is above 64, so the chance for a mean strength below
 64 is low.
 
 \section{}%4
-Do the data provide evidence that the mean strength of each alloy exceeds the
-threshold value of 64 ksi?  Now you will answer the question by carrying out the
-appr opriate statistical tests.
+% Do the data provide evidence that the mean strength of each alloy exceeds the
+% threshold value of 64 ksi?  Now you will answer the question by carrying out the
+% appr opriate statistical tests.
 \subsection{}%4a
-Carry out an appropriate test to check the above claim using the data for each
-alloy. In particular, state  the null and alternative hypotheses in terms of the
-population parameters, obtain the value of the test  statistic , specify the
-distribution of the test statistic under the null hypothesis, and obtain the  p
-- value of  the test. What do you conclude? Notice that as there is no
-appropriate feature in  Data Analysis to  carry out the test directly,  so  you
-will have to calc ulate the value of the test statistic and the  corresponding
-p - value by entering appropriate formulas into Excel worksheet.  Lab 3
-Instructions may  be useful in this part.
-
-Show your work here. (This is where \LaTeX{} shines)
+% Carry out an appropriate test to check the above claim using the data for each
+% alloy. In particular, state  the null and alternative hypotheses in terms of the
+% population parameters, obtain the value of the test  statistic , specify the
+% distribution of the test statistic under the null hypothesis, and obtain the  p
+% - value of  the test. What do you conclude? Notice that as there is no
+% appropriate feature in  Data Analysis to  carry out the test directly,  so  you
+% will have to calc ulate the value of the test statistic and the  corresponding
+% p - value by entering appropriate formulas into Excel worksheet.  Lab 3
+% Instructions may  be useful in this part.
+%
+% Show your work here. (This is where \LaTeX{} shines)
 $$H_0: \mu \leq 64 \quad vs. \quad H_A: \mu > 64 $$
 
 $$t_0 = \frac{\bar{x}-\mu_0}{s/\sqrt{n}} = \frac{65.09 - 64}{1.977171438/\sqrt{30}} =  3.019553976 \sim t_{29}$$
@@ -307,26 +307,31 @@ The assumptions outlined above hold for the test above, as we were told that the
 rods were randomly selected, and the sample size of the population is 30.
 
 \section{}%5
-In this part , you will compare the mean strength of ALLOY 1 and ALLOY 2 rods.
-Do the data provide  any evidence of a diffe rence in the mean strengths of
-ALLOY 1 and ALLOY 2 rods?
+% In this part , you will compare the mean strength of ALLOY 1 and ALLOY 2 rods.
+% Do the data provide  any evidence of a diffe rence in the mean strengths of
+% ALLOY 1 and ALLOY 2 rods?
 
 \subsection{}%5a
-Answer the above question by carrying out the appropriate test in the Data
-Analysis menu. Before  you choose an appropriate test, you might refer to the
-output in Question  3 to decide  what test would be appropriate.  In particular,
-state the null and alternative hypotheses in terms of the  population
-parameters, obtain the value of the test statistic, specify the distribution of
-the test statistic  under the null hypothesis, and obtain the  p - value o f the
-test. What do you conclude?
+% Answer the above question by carrying out the appropriate test in the Data
+% Analysis menu. Before  you choose an appropriate test, you might refer to the
+% output in Question  3 to decide  what test would be appropriate.  In particular,
+% state the null and alternative hypotheses in terms of the  population
+% parameters, obtain the value of the test statistic, specify the distribution of
+% the test statistic  under the null hypothesis, and obtain the  p - value o f the
+% test. What do you conclude?
 
-$$H_0: \mu_1 - \mu_2 =0  \quad vs. \quad H_A: \mu_1 - \mu_2 \neq 0  $$
+We'll do the two-tailed t-test as follows:
+(The test statistic follows a t-distribution)
+% since it works for equal and unequal
+% variances, and the population variances are unknown.
+Since, the population variances are unknown, we'll assume unequal variances.
+$$H_0: \mu_1 - \mu_2 = 0 \quad vs. \quad H_A: \mu_1 - \mu_2 \neq 0 $$
 
-$$t_0 =$$
+% Output: t-test output from Excel. For Hypotheses, is this one or 2 tailed?
+% Choose the correct t-test.
 
-$$ {p-value}: XX $$
-Output: t-test output from Excel. For Hypotheses, is this one or 2 tailed?
-Choose the correct t-test.
+Using the ``t-Test: Two-Sample Assuming Unequal Variances'' tool, we obtain the following:
+
 
 \subsection{}%5b
 What are the assumptions about the distribution of strength required to make the
