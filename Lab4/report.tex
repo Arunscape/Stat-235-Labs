@@ -299,7 +299,7 @@ $$t_0 = \frac{\bar{x}-\mu_0}{s/\sqrt{n}} = \frac{65.09 - 64}{0.917993815/\sqrt{3
 
 $$ {p-value}: pt(3.019553976, df=29, lower.tail=FALSE) = 0.0026185 $$
 
-Because the p-value obtained is extremely low, we reject $H_0$.
+Because the p-value obtained is extremely small, we reject $H_0$.
 i.e. the data strongly suggests that Alloy 1 exceeds the threshold value of 64.
 
 \subsubsection*{Alloy 2}
@@ -309,7 +309,7 @@ $$H_0: \mu \leq 64 \quad vs. \quad H_A: \mu > 64 $$
 $$t_0 = \frac{\bar{x}-\mu_0}{s/\sqrt{n}} = \frac{65.27333333 - 64}{0.917993815/\sqrt{30}} =  7.597364802 \sim t_{29}$$
 
 $$ {p-value}: pt(7.597364802, df=29, lower.tail=FALSE) = \SI{1.121033e-08} $$
-Again, this p-value is extremely low, so we reject $H_0$.
+Again, this p-value is extremely close to zero, so we reject $H_0$.
 i.e. the data strongly suggests that Alloy 2 exceeds the threshold value of 64.
 
 \subsection{}%4b
@@ -372,7 +372,7 @@ Using the ``t-Test: Two-Sample Assuming Unequal Variances'' tool, we obtain the 
   $P(T \leq t)$ two-tail       & 0.647486541  &          \\ \hline
   t Critical two-tail          & 2.01954097   &          \\ \hline
  \end{tabular}
- \caption{My caption. The tool uses $\alpha = 0.05$}
+ \caption{Excel output of the t-test. A value of $\alpha = 0.05$ was used.}
  \label{5a}
 \end{table}
 
@@ -441,23 +441,24 @@ Using the ``t-Test: Paired Two Sample for Means'' tool, we obtain the following:
   $P(T \leq t)$ two-tail       & 1.48E-16   &            \\ \hline
   t Critical two-tail          & 2.04523    &            \\ \hline
  \end{tabular}
- \caption{My caption. The value $\alpha=0.05$ was used}
- \label{my-label}
+ \caption{Excel output of the t-test. A value of $\alpha=0.05$ was used.}
+ \label{6a}
 \end{table}
 
 The test statistic $t_0 = -16.9038$ follows a t-distribution, with
 corresponding p-value: \SI{7.41E-17} obtained from the table above.
 
 We immediately notice that the p-value is so incredibly small that we
-can reject $H_0$. i.e. the data strongly suggests that the treatment
+reject $H_0$. i.e. the data strongly suggests that the treatment
 increased the mean strength of the Alloy 2 rods.
 
 \subsection{}%6b
-Use the  Descriptive Statistics feature in  the  Data Analysis menu to obtain a
-95\%  two - sided  confidence interval for the mean change in strength o f ALLOY
-2 rods after the treatment.   First create a new variable , EFFECT , defined as
-the difference in strength between ALLOY 2 + TREATMENT rods and ALLOY 2 rods. Is
-the interval consistent with the  test  outcome in part  (a)? Explain briefly.
+% Use the  Descriptive Statistics feature in  the  Data Analysis menu to obtain
+% a 95\%  two - sided  confidence interval for the mean change in strength o f
+% ALLOY 2 rods after the treatment.   First create a new variable , EFFECT ,
+% defined as the difference in strength between ALLOY 2 + TREATMENT rods and
+% ALLOY 2 rods. Is the interval consistent with the  test  outcome in part  (a)?
+% Explain briefly.
 
 \begin{table}[H]
  \centering
@@ -492,8 +493,8 @@ which indicated with high confidence that the population mean of Alloy 2 +
 treatment is higher than the population mean of Alloy 2 (without treatment).
 
 \subsection{}%6c
-What are the  assumptions necessary to make the test in part (a) and confidence
-interval in part (b)  valid?  Do the assumptions hold?  Explain briefly.
+% What are the  assumptions necessary to make the test in part (a) and confidence
+% interval in part (b)  valid?  Do the assumptions hold?  Explain briefly.
 
 The following assumptions are neccessary to make the test in part (a)
 and confidence interval in part (b) valid:
@@ -509,24 +510,25 @@ and confidence interval in part (b) valid:
 The first two assumptions hold, as we were told that the
 rods were randomly selected, and the sample size of the population is 30.
 \textbf{IS there more to be said here}
+%NOTE
 
 \subsection{}%6d
-Is the effect of the treatment independent of the initial strength of the rods?
-In order to answer the  question, obtain the plot of the variable EFFECT versus
-ALLOY 2 measurements. What do you  conclude?
-
-Output: Change in strength vs Scatter plot of Alloy 2 strength.
-Remember to put the response on the y-axis. All relationships have
-error, look at the middle data cloud to determine shape.
+% Is the effect of the treatment independent of the initial strength of the rods?
+% In order to answer the  question, obtain the plot of the variable EFFECT versus
+% ALLOY 2 measurements. What do you  conclude?
+%
+% Output: Change in strength vs Scatter plot of Alloy 2 strength.
+% Remember to put the response on the y-axis. All relationships have
+% error, look at the middle data cloud to determine shape.
 
 \begin{figure}[H]
  \centering
  \includegraphics[width=\textwidth]{q6.png}
- \caption{My caption}
+ \caption{Plot of the strength of Alloy 2 vs. the effect of the treatment.}
  \label{q6}
 \end{figure}
 
 From the scatterplot above, we can clearly see that with higher strength, the effect
-is less. This suggests that the effect of the treatment is not independent of the initial strength of the rods. The relationship appears to be linear.
+is less. This suggests that the effect of the treatment is not independent of the initial strength of the rods. The relationship may be linear.
 
 \end{document}
