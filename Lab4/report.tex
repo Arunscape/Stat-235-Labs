@@ -80,8 +80,8 @@ Keeping other parameters constant, changing the confidence level yields the folo
  \caption{My caption}
  \label{1a}
 \end{table}
-How does the margin of
-error change as the confidence interval increases? Explain briefly.
+% How does the margin of
+% error change as the confidence interval increases? Explain briefly.
 As seen in Table \ref{1a} above, the Margin of Error increases as the
 Confidence Level is increased. This makes sense because............
 
@@ -101,9 +101,13 @@ Confidence Level is increased. This makes sense because............
  \label{1b}
 \end{table}
 
-Are the observed counts consistent with the values predicted
-by the theory? Explain briefly.
-looks like you got some learnin to do....
+% Are the observed counts consistent with the values predicted
+% by the theory? Explain briefly.
+% looks like you got some learnin to do....
+Theoretically, the confidence level and the fraction of intervals that failed to cover
+the hypothesized mean should be add up to 1. Here, we see that the values are
+reasonable, adding up to 1.01 in all cases. Of course, a small difference is
+expected since we are using experimental data.
 
 \section{}%2
 $$ H_0: \mu=64 \quad vs. \quad H_A: \mu \neq 64 $$
@@ -115,16 +119,19 @@ $$ H_0: \mu=64 \quad vs. \quad H_A: \mu \neq 64 $$
  \begin{tabularx}{\textwidth}{|Y|Y|Y|}
   \hline
   Level of Significance & Number of Samples That Led to the Rejection of $H_0$ & Observed Fraction of Samples \\ \hline
-  0.10                  & XXXX                                                 & XXXX                         \\ \hline
-  0.05                  & XXXX                                                 & XXXX                         \\ \hline
-  0.01                  & XXXX                                                 & XXXX                         \\ \hline
+  0.10                  & 89                                                   & 0.89                         \\ \hline
+  0.05                  & 94                                                   & 0.94                         \\ \hline
+  0.01                  & 98                                                   & 0.98                         \\ \hline
  \end{tabularx}
  \caption{My caption}
  \label{2a}
 \end{table}
 
-How does the number of samples change as
-the level of significance increases? Explain briefly.
+% How does the number of samples change as
+% the level of significance increases? Explain briefly.
+
+As the level of significance increases, the number of samples also increases.
+This is because the margin of error also increases???????
 
 \subsection{}%2b
 
@@ -134,6 +141,16 @@ Compare the outcome of the test at the 5\% level of significance with the 95\% c
 that failed to cover the mean of 64 for each sample. Repeat the exercise with the 1\% level of
 significance and the 99\% confidence intervals. What do you conclude about the relationship
 between confidence intervals and two-sided tests?
+
+\subsubsection*{90\% confidence interval}
+what isn't this the same
+
+\subsubsection*{95\% confidence interval}
+what isn't this the same
+
+\subsubsection*{99\% confidence interval}
+what isn't this the same
+
 
 \section{}%3
 Summary tables for Alloy 1 and 2, Calculate the Confidence intervals yourself.
@@ -186,33 +203,35 @@ Summary tables for Alloy 1 and 2, Calculate the Confidence intervals yourself.
  \label{3a2}
 \end{table}
 
-\begin{table}[H]
- \centering
- \begin{tabular}{|c|c|}
-  \hline
-  \multicolumn{2}{|c|}{Alloy 2 + Treatment} \\ \hline
-  Mean                     & 66.82333333    \\ \hline
-  Standard Error           & 0.108350573    \\ \hline
-  Median                   & 66.75          \\ \hline
-  Mode                     & 66.9           \\ \hline
-  Standard Deviation       & 0.593460531    \\ \hline
-  Sample Variance          & 0.352195402    \\ \hline
-  Kurtosis                 & 7.169408133    \\ \hline
-  Skewness                 & 2.210176389    \\ \hline
-  Range                    & 3.1            \\ \hline
-  Minimum                  & 66             \\ \hline
-  Maximum                  & 69.1           \\ \hline
-  Sum                      & 2004.7         \\ \hline
-  Count                    & 30             \\ \hline
-  Confidence Level(95.0\%) & 0.221601804    \\ \hline
- \end{tabular}
- \caption{My caption}
- \label{3a3}
-\end{table}
+% \begin{table}[H]
+%  \centering
+%  \begin{tabular}{|c|c|}
+%   \hline
+%   \multicolumn{2}{|c|}{Alloy 2 + Treatment} \\ \hline
+%   Mean                     & 66.82333333    \\ \hline
+%   Standard Error           & 0.108350573    \\ \hline
+%   Median                   & 66.75          \\ \hline
+%   Mode                     & 66.9           \\ \hline
+%   Standard Deviation       & 0.593460531    \\ \hline
+%   Sample Variance          & 0.352195402    \\ \hline
+%   Kurtosis                 & 7.169408133    \\ \hline
+%   Skewness                 & 2.210176389    \\ \hline
+%   Range                    & 3.1            \\ \hline
+%   Minimum                  & 66             \\ \hline
+%   Maximum                  & 69.1           \\ \hline
+%   Sum                      & 2004.7         \\ \hline
+%   Count                    & 30             \\ \hline
+%   Confidence Level(95.0\%) & 0.221601804    \\ \hline
+%  \end{tabular}
+%  \caption{My caption}
+%  \label{3a3}
+% \end{table}
 
 Paste the summary statistics into your report and rep ort the 95\% confidence
 interval for each alloy. Use the summaries to compare the two alloys. Which of
-the two alloys has better strength qualities? Explain briefly.
+the two alloys has better strength qualities? Explain briefly.\\
+
+Alloy 1 appears to have better strength qualities because it has a higher confidence level?
 
 \subsection{}%3b
 According to the specifications, the mean strength of each alloy is required to
@@ -221,7 +240,9 @@ below the required threshold value of 64 ksi? Refe r to the 95\% confidence
 interval for each alloy to answer the question. Explain briefly.
 
 can be summarized in a few sentences -- keep it simple, does it exceed the
-threshold value?
+threshold value?\\
+
+Nah I don't think so
 
 \section{}%4
 Do the data provide evidence that the mean strength of each alloy exceeds the
@@ -239,14 +260,34 @@ p - value by entering appropriate formulas into Excel worksheet.  Lab 3
 Instructions may  be useful in this part.
 
 Show your work here. (This is where \LaTeX{} shines)
+$$H_0: \mu \leq 64 \quad vs. \quad H_A: \mu > 64 $$
+
+$$t_0 = \frac{\bar{x}-\mu}{s/\sqrt{n}} = XX \sim t_{x,x}$$
+
+$$ {p-value}: XX $$
+
+We reject $H_0$ because...
+
 
 \subsection{}%4b
 What are the assumptions about the distribution of strength required to make t
 he tests in part (a) valid?  Do the assumptions hold? Explain briefly. It is not
 required to verify the assumptions with Excel.
 
+The assumptions to make the tests in part (a) valid are as follows:
+
+\begin{enumerate}
+ \item
+\end{enumerate}
+
 What assumptions must be true for a t-test? Is there a theorem we covered that
 related to our normal distribution?
+
+The following assumptions must be true for a t-test:
+\begin{enumerate}
+ \item
+\end{enumerate}
+The Central Limit Theorem..............
 
 \section{}%5
 In this part , you will compare the mean strength of ALLOY 1 and ALLOY 2 rods.
@@ -262,6 +303,11 @@ parameters, obtain the value of the test statistic, specify the distribution of
 the test statistic  under the null hypothesis, and obtain the  p - value o f the
 test. What do you conclude?
 
+$$H_0: \mu  \quad vs. \quad H_A: \mu  $$
+
+$$t_0 =$$
+
+$$ {p-value}: XX $$
 Output: t-test output from Excel. For Hypotheses, is this one or 2 tailed?
 Choose the correct t-test.
 
@@ -270,7 +316,19 @@ What are the assumptions about the distribution of strength required to make the
 tests in part (a) valid?  Do the assumptions hold?  Explain briefly. It is not
 required to verify the assumptions with Excel.
 
+The assumptions to make the tests in part (a) valid are as follows:
+
+\begin{enumerate}
+ \item
+\end{enumerate}
+
 WHat are the assumptions for the t-test?
+
+The following assumptions must be true for a t-test:
+\begin{enumerate}
+ \item
+\end{enumerate}
+The Central Limit Theorem..............
 
 \section{}%6
 Th e  thirty  ALLOY  2  rods  were  subjected  to  a  combination  of  high
@@ -284,6 +342,12 @@ Excel.  In particular, state  the null  and alternative hypotheses in terms of
 the population parameters, obtain the value of the test  statistic,  specify the
 distributio n of the test statistic under the null hypothesis, and obtain the  p
 - value of the test.  What do you conclude?
+
+$$H_0: \mu  \quad vs. \quad H_A: \mu  $$
+
+$$t_0 =$$
+
+$$ {p-value}: XX $$
 
 t-test output from excel. CHoose t-test carefully
 
@@ -300,8 +364,20 @@ paste summary statistics from excel
 What are the  assumptions necessary to make the test in part (a) and confidence
 interval in part (b)  valid?  Do the assumptions hold?  Explain briefly.
 
+The assumptions to make the tests in part (a) valid are as follows:
+
+\begin{enumerate}
+ \item
+\end{enumerate}
+
 what are the assumptions for a t-test? Is there a theorem we touched on earlier
 that relates to the normal distribution?
+
+The following assumptions must be true for a t-test:
+\begin{enumerate}
+ \item
+\end{enumerate}
+The Central Limit Theorem..............
 
 \subsection{}%6d
 Is the effect of the treatment independent of the initial strength of the rods?
