@@ -83,7 +83,7 @@ Keeping other parameters constant, changing the confidence level yields the folo
 % How does the margin of
 % error change as the confidence interval increases? Explain briefly.
 As seen in Table \ref{1a} above, the Margin of Error increases as the
-Confidence Level is increased. This makes sense because the margin of error depends on the z value, which increases as $(1-\alpha)$ increases.
+Confidence Level is increased. This makes sense because the margin of error depends on the z value, which increases as ($1-\alpha$) increases.
 
 
 
@@ -291,15 +291,26 @@ intervals, the lower bound is above 64, so the chance for a mean strength below
 % Instructions may  be useful in this part.
 %
 % Show your work here. (This is where \LaTeX{} shines)
+\subsubsection*{Alloy 1}
+
 $$H_0: \mu \leq 64 \quad vs. \quad H_A: \mu > 64 $$
 
-$$t_0 = \frac{\bar{x}-\mu_0}{s/\sqrt{n}} = \frac{65.09 - 64}{1.977171438/\sqrt{30}} =  3.019553976 \sim t_{29}$$
+$$t_0 = \frac{\bar{x}-\mu_0}{s/\sqrt{n}} = \frac{65.09 - 64}{0.917993815/\sqrt{30}} =   \sim t_{29}$$
 
 $$ {p-value}: pt(3.019553976, df=29, lower.tail=FALSE) = 0.0026185 $$
 
 Because the p-value obtained is extremely low, we reject $H_0$.
-i.e., the data suggests that Alloy 1 exceeds the threshold value of 64.
+i.e. the data strongly suggests that Alloy 1 exceeds the threshold value of 64.
 
+\subsubsection*{Alloy 2}
+
+$$H_0: \mu \leq 64 \quad vs. \quad H_A: \mu > 64 $$
+
+$$t_0 = \frac{\bar{x}-\mu_0}{s/\sqrt{n}} = \frac{65.27333333 - 64}{0.917993815/\sqrt{30}} =  7.597364802 \sim t_{29}$$
+
+$$ {p-value}: pt(7.597364802, df=29, lower.tail=FALSE) = \SI{1.121033e-08} $$
+Again, this p-value is extremely low, so we reject $H_0$.
+i.e. the data strongly suggests that Alloy 2 exceeds the threshold value of 64.
 
 \subsection{}%4b
 % What are the assumptions about the distribution of strength required to make t
