@@ -280,7 +280,7 @@ $$H_0: \mu \leq 64 \quad vs. \quad H_A: \mu > 64 $$
 
 $$t_0 = \frac{\bar{x}-\mu_0}{s/\sqrt{n}} = \frac{65.09 - 64}{1.977171438/\sqrt{30}} =  3.019553976 \sim t_{29}$$
 
-$$ {p-value}: 1-pt(3.019553976, df=29) = 0.0026185 $$
+$$ {p-value}: pt(3.019553976, df=29, lower.tail=FALSE) = 0.0026185 $$
 
 Because the p-value obtained is extremely low, we reject $H_0$.
 i.e., the data suggests that Alloy 1 exceeds the threshold value of 64.
@@ -321,7 +321,6 @@ rods were randomly selected, and the sample size of the population is 30.
 % test. What do you conclude?
 
 We'll do the two-tailed t-test as follows:
-(The test statistic follows a t-distribution)
 % since it works for equal and unequal
 % variances, and the population variances are unknown.
 Since, the population variances are unknown, we'll assume unequal variances.
@@ -332,6 +331,35 @@ $$H_0: \mu_1 - \mu_2 = 0 \quad vs. \quad H_A: \mu_1 - \mu_2 \neq 0 $$
 
 Using the ``t-Test: Two-Sample Assuming Unequal Variances'' tool, we obtain the following:
 
+\begin{table}[H]
+ \centering
+ \begin{tabular}{c|c|c|}
+                               & Alloy 1      & Alloy 2  \\ \hline
+  Mean                         & 65.09        & 65.27333 \\ \hline
+  Variance                     & 3.909206897  & 0.842713 \\ \hline
+  Observations                 & 30           & 30       \\ \hline
+  Hypothesized Mean Difference & 0            &          \\ \hline
+  df                           & 41           &          \\ \hline
+  t Stat                       & -0.460646232 &          \\ \hline
+  $P(T \leq t)$ one-tail       & 0.32374327   &          \\ \hline
+  t Critical one-tail          & 1.682878002  &          \\ \hline
+  $P(T \leq t)$ two-tail       & 0.647486541  &          \\ \hline
+  t Critical two-tail          & 2.01954097   &          \\ \hline
+ \end{tabular}
+ \caption{My caption. The tool uses $\alpha = 0.05$}
+ \label{5a}
+\end{table}
+
+The test statistic $t_0 = -0.460646232$ follows a t-distribution, with
+corresponding p-value: $0.647486541$ obtained from the table above.
+
+$$t_{\alpha/2, min\{n-1, m-1\}} = t_{0.05/2, 29} = pt(0.025, df=29, lower.tail=TRUE) = 0.5098869$$
+
+$H_0$ should be rejected if $t_0$ is greater than the value above, which isn't
+the case. Similarly, with the ``judgement approach'' we find that the p-value is
+above 0.1, which is weak to no evidence against $H_0$ Therefore, we fail to
+reject $H_0$. i.e. there is not sufficient evidence to support that there is a
+difference in the mean strengths of Alloy 1 and Alloy 2 rods.
 
 \subsection{}%5b
 What are the assumptions about the distribution of strength required to make the
