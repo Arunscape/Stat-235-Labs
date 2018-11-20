@@ -320,7 +320,7 @@ rods were randomly selected, and the sample size of the population is 30.
 % the test statistic  under the null hypothesis, and obtain the  p - value o f the
 % test. What do you conclude?
 
-We'll do the two-tailed t-test as follows:
+We'll do the two-tailed t-test as follows:\\
 % since it works for equal and unequal
 % variances, and the population variances are unknown.
 Since, the population variances are unknown, we'll assume unequal variances.
@@ -392,15 +392,39 @@ the ALLOY 2  rods? Answer the question by carrying out an appropriate test in
 Excel.  In particular, state  the null  and alternative hypotheses in terms of
 the population parameters, obtain the value of the test  statistic,  specify the
 distributio n of the test statistic under the null hypothesis, and obtain the  p
-- value of the test.  What do you conclude?
+- value of the test. What do you conclude?
 
-$$H_0: \mu_1 = \mu_2  \quad vs. \quad H_A: \mu_1 \neq \mu_2  $$
+We'll do the one-tailed t-test for paired data as follows:\\
+$$H_0: \mu_2 - \mu_{2+treatment} \geq 0  \quad vs. \quad H_A: \mu_2 - \mu_{2+treatment} < 0 $$
 
-$$t_0 =$$
+Using the ``t-Test: Paired Two Sample for Means'' tool, we obtain the following:
 
-$$ {p-value}: XX $$
+\begin{table}[H]
+ \centering
+ \begin{tabular}{c|c|c|}
+                               & Variable 1 & Variable 2 \\ \hline
+  Mean                         & 65.27333   & 66.8233333 \\ \hline
+  Variance                     & 0.842713   & 0.3521954  \\ \hline
+  Observations                 & 30         & 30         \\ \hline
+  Pearson Correlation          & 0.86516    &            \\ \hline
+  Hypothesized Mean Difference & 0          &            \\ \hline
+  df                           & 29         &            \\ \hline
+  t Stat                       & -16.9038   &            \\ \hline
+  $P(T \leq t)$ one-tail       & 7.41E-17   &            \\ \hline
+  t Critical one-tail          & 1.699127   &            \\ \hline
+  $P(T \leq t)$ two-tail       & 1.48E-16   &            \\ \hline
+  t Critical two-tail          & 2.04523    &            \\ \hline
+ \end{tabular}
+ \caption{My caption. The value $\alpha=0.05$ was used}
+ \label{my-label}
+\end{table}
 
-t-test output from excel. CHoose t-test carefully
+The test statistic $t_0 = -16.9038$ follows a t-distribution, with
+corresponding p-value: \SI{7.41E-17} obtained from the table above.
+
+We immediately notice that the p-value is so incredibly small that we
+reject $H_0$. i.e. the data strongly suggests that the treatment
+increased the mean strength of the Alloy 2 rods.
 
 \subsection{}%6b
 Use the  Descriptive Statistics feature in  the  Data Analysis menu to obtain a
