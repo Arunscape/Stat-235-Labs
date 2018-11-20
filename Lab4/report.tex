@@ -131,30 +131,45 @@ $$ H_0: \mu=64 \quad vs. \quad H_A: \mu \neq 64 $$
 % How does the number of samples change as
 % the level of significance increases? Explain briefly.
 
-As the level of significance increases, the number of samples also increases.
-This is because the margin of error also increases???????
+As the level of significance increases, the number of samples that led to the
+rejection of $H_0$ also increases. This makes sense, because the the probability
+of making a Type I error is $\alpha$, (or the level of significance) which
+happens when the null hypothesis is incorrectly rejected. With a higher
+tolerance for error, we would expect the amount of incorrect rejections to
+increase, which would increase the total fraction of samples rejected.
 
 \subsection{}%2b
 
-Write your null hypothesis. (SHould have a solid understanding of p-values for this)
+% Write your null hypothesis. (SHould have a solid understanding of p-values for this)
 
-Compare the outcome of the test at the 5\% level of significance with the 95\% confidence intervals
-that failed to cover the mean of 64 for each sample. Repeat the exercise with the 1\% level of
-significance and the 99\% confidence intervals. What do you conclude about the relationship
-between confidence intervals and two-sided tests?
+% Compare the outcome of the test at the 5\% level of significance with the 95\% confidence intervals
+% that failed to cover the mean of 64 for each sample. Repeat the exercise with the 1\% level of
+% significance and the 99\% confidence intervals. What do you conclude about the relationship
+% between confidence intervals and two-sided tests?
 
-\subsubsection*{90\% confidence interval}
-what isn't this the same
+% The wording on this question is a bit unclear, so this is how I
+% want you to answer it. Write 3 null hypotheses (one for 90\%, 95\%, and
+% 99\% each) . Write your null hypotheses in terms of your confidence
+% interval (that’s the only part that changes).
+% Then, explain when you would reject your null hypothesis. Explain the
+% relationship between the C.I. and alpha (⍺) as an equation.
 
-\subsubsection*{95\% confidence interval}
-what isn't this the same
+\subsubsection*{90\% confidence interval null hypothesis}
+90 \% of the time, the population mean is 64 ksi.
 
-\subsubsection*{99\% confidence interval}
-what isn't this the same
+\subsubsection*{95\% confidence interval null hypothesis}
+95 \% of the time, the population mean is 64 ksi.
+
+\subsubsection*{99\% confidence interval null hypothesis}
+99 \% of the time, the population mean is 64 ksi.
+
+The null hypothesis $H_0$ is rejected when the test statistic
+does not fall within the confidence interval with significance $\alpha$.
+The confidence interval is calculated as the mean $\pm$ the confidence level $1-\alpha$
 
 
 \section{}%3
-Summary tables for Alloy 1 and 2, Calculate the Confidence intervals yourself.
+% Summary tables for Alloy 1 and 2, Calculate the Confidence intervals yourself.
 \subsection{}%3a
 
 \begin{table}[H]
