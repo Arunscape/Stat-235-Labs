@@ -282,29 +282,29 @@ $$t_0 = \frac{\bar{x}-\mu_0}{s/\sqrt{n}} = \frac{65.09 - 64}{1.977171438/\sqrt{3
 
 $$ {p-value}: 1-pt(3.019553976, df=29) = 0.0026185 $$
 
-We reject $H_0$ because the p-value obtained is extremely low. i.e., the data
-suggests that Alloy 1 exceeds the threshold value of 64.
+Because the p-value obtained is extremely low, we reject $H_0$.
+i.e., the data suggests that Alloy 1 exceeds the threshold value of 64.
 
 
 \subsection{}%4b
-What are the assumptions about the distribution of strength required to make t
-he tests in part (a) valid?  Do the assumptions hold? Explain briefly. It is not
-required to verify the assumptions with Excel.
-
-The assumptions to make the tests in part (a) valid are as follows:
-
-\begin{enumerate}
- \item
-\end{enumerate}
-
-What assumptions must be true for a t-test? Is there a theorem we covered that
-related to our normal distribution?
-
+% What are the assumptions about the distribution of strength required to make t
+% he tests in part (a) valid?  Do the assumptions hold? Explain briefly. It is not
+% required to verify the assumptions with Excel.
+%
+% The assumptions to make the tests in part (a) valid are as follows:
 The following assumptions must be true for a t-test:
 \begin{enumerate}
- \item
+ \item The samples are independent and random
+ \item The samples come from a normal population,
+       OR from a population with sample size 30 or greater
+       (The Central Limit Theorem guarantees samples are normally distributed
+       when the population size is $\geq 30$)
 \end{enumerate}
-The Central Limit Theorem..............
+
+% What assumptions must be true for a t-test? Is there a theorem we covered that
+% related to our normal distribution?
+The assumptions outlined above hold for the test above, as we were told that the
+rods were randomly selected, and the sample size of the population is 30.
 
 \section{}%5
 In this part , you will compare the mean strength of ALLOY 1 and ALLOY 2 rods.
