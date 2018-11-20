@@ -305,7 +305,8 @@ intervals, the lower bound is above 64, so the chance for a mean strength below
 
 $$H_0: \mu \leq 64 \quad vs. \quad H_A: \mu > 64 $$
 
-$$t_0 = \frac{\bar{x}-\mu_0}{s/\sqrt{n}} = \frac{65.09 - 64}{0.917993815/\sqrt{30}} =   \sim t_{29}$$
+The test statistic follows a t-distrubution.
+$$t_0 = \frac{\bar{x}-\mu_0}{s/\sqrt{n}} = \frac{65.09 - 64}{0.917993815/\sqrt{30}} = 3.019553976  \sim t_{29}$$
 
 $$ {p-value}: pt(3.019553976, df=29, lower.tail=FALSE) = 0.0026185 $$
 
@@ -316,6 +317,7 @@ i.e. the data strongly suggests that Alloy 1 exceeds the threshold value of 64.
 
 $$H_0: \mu \leq 64 \quad vs. \quad H_A: \mu > 64 $$
 
+The test statistic follows a t-distrubution.
 $$t_0 = \frac{\bar{x}-\mu_0}{s/\sqrt{n}} = \frac{65.27333333 - 64}{0.917993815/\sqrt{30}} =  7.597364802 \sim t_{29}$$
 
 $$ {p-value}: pt(7.597364802, df=29, lower.tail=FALSE) = \SI{1.121033e-08} $$
@@ -340,7 +342,8 @@ The following assumptions must be true for a t-test:
 % What assumptions must be true for a t-test? Is there a theorem we covered that
 % related to our normal distribution?
 The assumptions outlined above hold for the test above, as we were told that the
-rods were randomly selected, and the sample size of the population is 30.
+rods were randomly selected, the samples are completely different, and the
+sample size of the population is 30.
 
 \section{}%5
 % In this part , you will compare the mean strength of ALLOY 1 and ALLOY 2 rods.
@@ -414,7 +417,9 @@ The assumptions to make the tests in part (a) valid are as follows:
 
 The first two assumptions outlined hold for the test above, as we were told that the
 rods were randomly selected, and the sample size of the population is 30.
-\textbf{The population variances are unknown so we don't know if the 3rd assumption is valid?!}
+As for the third assumption, we should assume unequal variances for populations
+with unknown variances, so this holds as well.
+%NOTE
 % WHat are the assumptions for the t-test?
 
 \section{}%6
@@ -423,12 +428,12 @@ rods were randomly selected, and the sample size of the population is 30.
 % of the treatment on the mean strength of the rods.
 
 \subsection{}%6a
-Do the data provide evidence that the treatment increased the mean s trength of
-the ALLOY 2  rods? Answer the question by carrying out an appropriate test in
-Excel.  In particular, state  the null  and alternative hypotheses in terms of
-the population parameters, obtain the value of the test  statistic,  specify the
-distributio n of the test statistic under the null hypothesis, and obtain the  p
-- value of the test. What do you conclude?
+% Do the data provide evidence that the treatment increased the mean strength of
+% the ALLOY 2 rods? Answer the question by carrying out an appropriate test in
+% Excel. In particular, state  the null  and alternative hypotheses in terms of
+% the population parameters, obtain the value of the test  statistic,  specify
+% the distributio n of the test statistic under the null hypothesis, and obtain
+% the  p - value of the test. What do you conclude?
 
 We'll do the one-tailed t-test for paired data as follows:\\
 $$H_0: \mu_2 - \mu_{2+treatment} \geq 0  \quad vs. \quad H_A: \mu_2 - \mu_{2+treatment} < 0 $$
@@ -489,7 +494,7 @@ increased the mean strength of the Alloy 2 rods.
   Count                     & 30       \\ \hline
   Confidence Level (95.0\%) & 0.187538 \\ \hline
  \end{tabular}
- \caption{My caption}
+ \caption{Descriptive statistics for the ``effect'' variable.}
  \label{my-label}
 \end{table}
 
@@ -539,7 +544,8 @@ Alloy 2 is treated, so the third assumption also holds.
  \label{q6}
 \end{figure}
 
-From the scatterplot above, we can clearly see that with higher strength, the effect
-is less. This suggests that the effect of the treatment is not independent of the initial strength of the rods. The relationship may be linear.
+From the scatterplot above, we can clearly see that with higher strength, the
+``effect'' is less. This suggests that the effect of the treatment is not
+independent of the initial strength of the rods. The relationship may be linear.
 
 \end{document}
