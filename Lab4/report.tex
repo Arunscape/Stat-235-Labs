@@ -423,7 +423,7 @@ The test statistic $t_0 = -16.9038$ follows a t-distribution, with
 corresponding p-value: \SI{7.41E-17} obtained from the table above.
 
 We immediately notice that the p-value is so incredibly small that we
-reject $H_0$. i.e. the data strongly suggests that the treatment
+can reject $H_0$. i.e. the data strongly suggests that the treatment
 increased the mean strength of the Alloy 2 rods.
 
 \subsection{}%6b
@@ -437,43 +437,52 @@ the interval consistent with the  test  outcome in part  (a)? Explain briefly.
  \centering
  \begin{tabular}{|c|c|}
   \hline
-  Mean                     & 1.55     \\ \hline
-  Standard Error           & 0.091695 \\ \hline
-  Median                   & 1.6      \\ \hline
-  Mode                     & 2        \\ \hline
-  Standard Deviation       & 0.502236 \\ \hline
-  Sample Variance          & 0.252241 \\ \hline
-  Kurtosis                 & 0.942104 \\ \hline
-  Skewness                 & -0.9204  \\ \hline
-  Range                    & 2.2      \\ \hline
-  Minimum                  & 0.1      \\ \hline
-  Maximum                  & 2.3      \\ \hline
-  Sum                      & 46.5     \\ \hline
-  Count                    & 30       \\ \hline
-  Confidence Level(95.0\%) & 0.187538 \\ \hline
+  Mean                      & 1.55     \\ \hline
+  Standard Error            & 0.091695 \\ \hline
+  Median                    & 1.6      \\ \hline
+  Mode                      & 2        \\ \hline
+  Standard Deviation        & 0.502236 \\ \hline
+  Sample Variance           & 0.252241 \\ \hline
+  Kurtosis                  & 0.942104 \\ \hline
+  Skewness                  & -0.9204  \\ \hline
+  Range                     & 2.2      \\ \hline
+  Minimum                   & 0.1      \\ \hline
+  Maximum                   & 2.3      \\ \hline
+  Sum                       & 46.5     \\ \hline
+  Count                     & 30       \\ \hline
+  Confidence Level (95.0\%) & 0.187538 \\ \hline
  \end{tabular}
  \caption{My caption}
  \label{my-label}
 \end{table}
 
+The two-sided confidence interval is found as follows:
+$$1.55 \pm 0.187538 \approx (1.362, 1.738) $$
+This interval is consistent with the test outcome in
+part (a), because it indicates with high confidence that the population mean of
+Alloy 2 + treatment is between 1.362 and 1.738 ksi stronger than the population
+mean of Alloy 2 (sans treatment). This agrees with the test outcome in part (a),
+which indicated with high confidence that the population mean of Alloy 2 +
+treatment is higher than the population mean of Alloy 2 (without treatment).
+
 \subsection{}%6c
 What are the  assumptions necessary to make the test in part (a) and confidence
 interval in part (b)  valid?  Do the assumptions hold?  Explain briefly.
 
-The assumptions to make the tests in part (a) valid are as follows:
-
+The following assumptions are neccessary to make the test in part (a)
+and confidence interval in part (b) valid:
 \begin{enumerate}
- \item
+ \item The samples are random
+ \item The samples come from a normal population,
+       OR from a population with sample size 30 or greater
+       (The Central Limit Theorem guarantees samples are normally distributed
+       when the population size is $\geq 30$)
+ \item the samples are paired?
 \end{enumerate}
 
-what are the assumptions for a t-test? Is there a theorem we touched on earlier
-that relates to the normal distribution?
-
-The following assumptions must be true for a t-test:
-\begin{enumerate}
- \item
-\end{enumerate}
-The Central Limit Theorem..............
+The first two assumptions hold, as we were told that the
+rods were randomly selected, and the sample size of the population is 30.
+\textbf{IS there more to be said here}
 
 \subsection{}%6d
 Is the effect of the treatment independent of the initial strength of the rods?
@@ -490,5 +499,8 @@ error, look at the middle data cloud to determine shape.
  \caption{My caption}
  \label{q6}
 \end{figure}
+
+From the scatterplot above, we can clearly see that with higher strength, the effect
+is less. This suggests that the effect of the treatment is not independent of the initial strength of the rods. The relationship appears to be linear.
 
 \end{document}
