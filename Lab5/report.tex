@@ -1,0 +1,74 @@
+%preamble
+\documentclass[letterpaper]{article}
+\synctex=1
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+
+\usepackage{lipsum}
+\usepackage{float}
+% \bibliographystyle{IEEEtran}
+% \bibliographystyle{ieeetr}
+
+\usepackage{amssymb}
+
+\usepackage{siunitx}
+
+\usepackage{multirow}
+% for merging table cells I think
+
+\usepackage{tabularx}
+% allows for linewrap within cells
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+
+\usepackage{fancyhdr} %header
+\fancyhf{}
+\fancyhead[R]{Arun Woosaree XXXXXXX}
+\renewcommand\headrulewidth{0pt}
+\fancyfoot[C]{\thepage}
+\renewcommand\footrulewidth{0pt}
+\pagestyle{fancy}
+
+% make subsection use letters
+\renewcommand{\thesubsection}{\thesection\ \alph{subsection})}
+
+
+% \usepackage{amsthm}
+% \newtheorem*{clt}{Central Limit Theorem}
+
+%actual document
+\begin{document}
+
+% \maketitle %insert titlepage here
+\begin{titlepage}
+ \begin{center}
+  \vspace*{1cm}
+  \Huge
+  Stat 235
+  \vspace{1cm}
+  
+  Lab 4
+  \vspace{1cm}
+  
+  WOOSAREE, Arun
+  \vspace{1cm}
+  
+  \Huge
+  Lab EL12
+  \vspace{1cm}
+  
+  TA: Jessa Marley
+  \vspace{1cm}
+  
+  \today
+  \vfill
+ \end{center}
+\end{titlepage}
+
+% \begin{figure}[H]
+%  \centering
+%  \includegraphics[width=\textwidth]{q6.png}
+%  \caption{Plot of the strength of Alloy 2 vs. the effect of the treatment.}
+%  \label{q6}
+% \end{figure}
+
+\end{document}
