@@ -157,8 +157,11 @@ Define the model as an equation, use the basic equation of
 regression. Assumptions of regression?
 
 The regression model is as follows:
-$$y = \beta_0 + \beta_1 x_1$$
-, where $y$ is the thrust, and $x_1$ is the fuel flow rate. The model's assumptions
+\begin{equation}
+ y = \beta_0 + \beta_1 x + \epsilon
+ \label{model}
+\end{equation}
+, where $y$ is the thrust, and $x$ is the fuel flow rate. The model's assumptions
 are as follows:
 \begin{enumerate}
  \item The distribution of $\epsilon$ at any $x$ has a mean of 0 ($\mu_\epsilon=0$ to aid linearity)
@@ -169,33 +172,33 @@ are as follows:
 
 \section{4.	Perform a simple linear regression analysis using thrust as the response variable and fuel flow rate as the predictor variable using the Regression tool. Then use the computer output to answer the following questions:}
 OUTPUT: Regression output from excel, not necessary/being marked.
-\begin{table}[H]
- \centering
- \begin{tabular}{|c|c|}
-  \hline
-  \multicolumn{2}{|c|}{Regression Statistics} \\ \hline
-  Multiple R        & 0.928792499             \\ \hline
-  R Square          & 0.862655506             \\ \hline
-  Adjusted R Square & 0.859041177             \\ \hline
-  Standard Error    & 189.466735              \\ \hline
-  Observations      & 40                      \\ \hline
- \end{tabular}
-\end{table}
 
 \subsection{(a)	What is the estimated regression equation? Are there any influential observations  in the sense that removing them would change the fitted line? Are there any outliers (large residuals)?}
 Equation of regression with coefficient values. Determine
 influential points from scatter plot in Q1. Determine outlier residuals from residual plot.
 
+Using the regression tool in Excel, we find $\beta_0=-25860.12772$, and
+$\beta_1=1.005348711$.
+So, Equation \ref{model} becomes
+$$ Thrust = -25860.12772 + 1.005348711 \times (rate) + \epsilon$$
+\todo{Are there any influential observations  in the sense that removing them would change the fitted line? Are there any outliers (large residuals)?}
+
 \subsection{(b)	What is the value of s, the estimate of the model standard deviation ($\sigma$)?}
 Standard deviation? Compare to average.
+\todo{idk where to find this. is it 189.466735? compare to average of what?}
 
 \subsection{(c)	What percent of the variation in  thrust is explained by fuel flow rate? What other possible predictor variables may explain the remaining variation?}
 Percent of variation? What might explain variation?
+\todo{idk}
 
 \subsection{(d)	Is linear regression on fuel flow rate of any value in explaining thrust? In particular, state the
  null and alternative hypotheses in terms of the population slope of the regression line, obtain the value of the test statistic, specify the distribution of the test statistic under the null hypothesis, and obtain the p-value of the test. What do you conclude?}
 Hypotheses? What kind of test can you use? Values of test
 statistics? P-value? Null distribution? Conclusion?
+
+Let the null hypothesis be that the fuel flow rate does not have any value in explaining the thrust:
+$$ H_0: \beta_1 =0 vs. \quad H_A: \beta_1 \neq 0 $$
+The distribution of the test statistic follows a null dustribution.
 
 \subsection{(e)	Use the output to obtain a 95\% confidence interval for the mean change in thrust as fuel flow rate increases by 1 unit.}
 Interpret coefficients. Confidence interval?
