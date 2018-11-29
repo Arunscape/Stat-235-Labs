@@ -33,7 +33,6 @@
 
 
 % \usepackage{amsthm}
-% \newtheorem*{clt}{Central Limit Theorem}
 
 %actual document
 \begin{document}
@@ -46,7 +45,7 @@
   Stat 235
   \vspace{1cm}
   
-  Lab 4
+  Lab 5
   \vspace{1cm}
   
   WOOSAREE, Arun
@@ -64,11 +63,121 @@
  \end{center}
 \end{titlepage}
 
+\section{1.	First examine the relationship between the response variable (thrust) and each of of the three  predictor variables with scatterplots.}
+
+\subsection{(a)	Obtain a scatterplot of thrust versus each of the three predictors. The  format of each of the three scatterplots should be consistent with the format used in Lab 1 Instructions (no lines or grids, axes rescaled to display only the observed values, title, names of the axes).  Paste the three scatterplots into your report. }
+OUTPUT: 3 Scatterplots, thrust vs. Fuel flow rate, thrust vs.
+exhaust temperature, thrust vs. Ambient temperature.
+What should be on the y-axis?
+
+\subsection{(b)	Comment briefly on the relationship between thrust and each of the three predictors. In particular, comment on the overall shape (line, curve), direction (positive, negative), and strength (size of the scatter and its inclination) of the relationship. Which of the three predictor variables seems to be the best predictor of thrust? }
+Look at the center of the “clouds”.  Are they linear? Strength of
+linear relationship?
+
+\section{2.	Examining the array of all possible pairwise correlation coefficients is another way to understand the relationships among variables. Use the Correlation tool in the Data Analysis menu to obtain the correlation matrix for the four variables}
+
+\subsection{(a)	Paste the correlation matrix into your report. Make sure that the matrix contains the names of all variables.}
+OUTPUT: Correlation matrix.
+
+\subsection{(b)	Identify the regressor variables (predictors) having the largest and smallest absolute values of correlation with the response variable (thrust). Do the signs and magnitudes of the correlation coefficient between thrust and each predictor confirm your conclusions you have reached in Question 1? Explain briefly.}
+Highest correlation, lowest (note absolute value)? Does this
+match the conclusions from Q1?
+
+\section{3.	Define a simple linear  regression model with thrust as the response variable and fuel flow rate as the predictor variable.  State the model assumptions.}
+Define the model as an equation, use the basic equation of
+regression. Assumptions of regression?
+
+\section{4.	Perform a simple linear regression analysis using thrust as the response variable and fuel flow rate as the predictor variable using the Regression tool. Then use the computer output to answer the following questions:}
+OUTPUT: Regression output from excel, not necessary/being marked.
+
+\subsection{(a)	What is the estimated regression equation? Are there any influential observations  in the sense that removing them would change the fitted line? Are there any outliers (large residuals)?}
+Equation of regression with coefficient values. Determine
+influential points from scatter plot in Q1. Determine outlier residuals from residual plot.
+
+\subsection{(b)	What is the value of s, the estimate of the model standard deviation ($\sigma$)?}
+Standard deviation? Compare to average.
+
+\subsection{(c)	What percent of the variation in  thrust is explained by fuel flow rate? What other possible predictor variables may explain the remaining variation?}
+Percent of variation? What might explain variation?
+
+\subsection{(d)	Is linear regression on fuel flow rate of any value in explaining thrust? In particular, state the
+ null and alternative hypotheses in terms of the population slope of the regression line, obtain the value of the test statistic, specify the distribution of the test statistic under the null hypothesis, and obtain the p-value of the test. What do you conclude?}
+Hypotheses? What kind of test can you use? Values of test
+statistics? P-value? Null distribution? Conclusion?
+
+\subsection{(e)	Use the output to obtain a 95\% confidence interval for the mean change in thrust as fuel flow rate increases by 1 unit.}
+Interpret coefficients. Confidence interval?
+
+\subsection{(f)	Use the regression model to predict the mean thrust when fuel flow rate is 30,250 (case 1). What is the value of the residual in this case?}
+Predicted value? Residual?
+
+\subsection{(g)	Obtain and paste the plot of residuals against fuel flow rate. Describe the pattern of the residuals. Do the residuals appear to be randomly scattered about a horizontal line at zero? Does the assumption of normality for the residuals seem appropriate? Paste the plot into your report and provide explanations.}
+OUTPUT: Residual plot. Interpret the plot, are the assumptions met?
+
+\section{5.	Perform a simple linear regression analysis using thrust as the response variable and exhaust temperature as the predictor variable. Use the computer output to repeat parts (a) – (d) and (g) of Question 4 with exhaust temperature instead of fuel flow rate as the predictor variable. You may copy the appropriate statistics from the output to answer the questions. However, in your answer to part (g), you should include the residual plot.}
+OUTPUT: Regression output. Optional.
+
+\subsection{}
+Equation with numerical values of coefficients. Determine
+influential points from scatter plot in Q1. Determine outlier residual from residual plot.
+
+\subsection{}
+Standard deviation? Compare to average.
+
+\subsection{}
+Percent of variation?
+
+\subsection{}
+Hypotheses? Distribution? Test statistic? P-value? Conclusion?
+
+\setcounter{subsection}{6}
+\subsection{}
+OUTPUT: Residual Plot. Interpret the plot. Are the assumptions met?
+
+\section{6.	Compare the results of the regressions performed in Questions 4 and 5. In particular, construct a table with R2 values, the estimates of the standard deviation (s), the values of the t-statistic, and the p-values for each model. Which of the two models do you think is better (more reliable) at predicting thrust? Explain briefly.}
+What’s the best predictor? S = model standard deviation
+
+\begin{table}[H]
+ \centering
+ \begin{tabular}{|c|c|c|c|c|}
+  \hline
+  Thrust vs. & $R^2$ & s & t-statistic & p-value \\ \hline
+  Rate       & 0     & 0 & 0           & 0       \\ \hline
+  Extemp     & 0     & 0 & 0           & 0       \\ \hline
+ \end{tabular}
+ \caption{My caption}
+ \label{q6}
+\end{table}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 % \begin{figure}[H]
 %  \centering
 %  \includegraphics[width=\textwidth]{q6.png}
 %  \caption{Plot of the strength of Alloy 2 vs. the effect of the treatment.}
 %  \label{q6}
 % \end{figure}
+
+\newpage
+\thispagestyle{empty}
+\begin{figure}
+ \centering
+ \includegraphics[width=\textwidth]{correlation.png}
+ % \caption{---}
+ \label{xkcd}
+\end{figure}
 
 \end{document}
