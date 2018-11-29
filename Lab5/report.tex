@@ -22,6 +22,12 @@
 
 \usepackage{todonotes}
 
+\usepackage[utf8]{inputenc}
+\usepackage[T2A,T1]{fontenc}
+% \DeclareSymbolFont{cyrillic}{T2A}{cmr}{m}{n}
+% \DeclareMathSymbol{\Sha}{\mathalpha}{cyrillic}{216}
+% \DeclareMathSymbol{\cyrje}{\LastDeclaredEncoding}{106}
+
 \usepackage{fancyhdr} %header
 \fancyhf{}
 \fancyhead[R]{Arun Woosaree XXXXXXX}
@@ -144,9 +150,32 @@ the rate having the largest correlation with a positive slope, and the
 ambient temperature having a weak correlation and slightly negative slope.
 \todo{maybe be more precise}
 
-\section{3.	Define a simple linear  regression model with thrust as the response variable and fuel flow rate as the predictor variable.  State the model assumptions.}
+\section{3.	Define a simple linear regression model with thrust as the response variable and fuel flow rate as the predictor variable.  State the model assumptions.}
 Define the model as an equation, use the basic equation of
 regression. Assumptions of regression?
+
+The regression model is as follows:
+$$y = \beta_0 + \beta_1 x_1$$
+, where $y$ is the thrust, and $x_1$ is the fuel flow rate. The model's assumptions
+are as follows:
+\begin{enumerate}
+ \item The distribution of $\epsilon$ at any $x$ has a mean of 0 ($\mu_\epsilon=0$ to aid linearity)
+ \item The standard deviation of $\epsilon$ is the same for any $x$ (it's constant)
+ \item The distribution of $\epsilon$ at any $x$ is normal
+ \item The random deviations $\epsilon_1, \epsilon_2, ..., \epsilon_n$ associated with different observations are independent of one another \cyrnje
+\end{enumerate}
+\begin{table}[H]
+ \centering
+ \begin{tabular}{|c|c|}
+  \hline
+  \multicolumn{2}{|c|}{Regression Statistics} \\ \hline
+  Multiple R        & 0.928792499             \\ \hline
+  R Square          & 0.862655506             \\ \hline
+  Adjusted R Square & 0.859041177             \\ \hline
+  Standard Error    & 189.466735              \\ \hline
+  Observations      & 40                      \\ \hline
+ \end{tabular}
+\end{table}
 
 \section{4.	Perform a simple linear regression analysis using thrust as the response variable and fuel flow rate as the predictor variable using the Regression tool. Then use the computer output to answer the following questions:}
 OUTPUT: Regression output from excel, not necessary/being marked.
