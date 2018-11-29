@@ -20,6 +20,8 @@
 % allows for linewrap within cells
 \newcolumntype{Y}{>{\centering\arraybackslash}X}
 
+\usepackage{todonotes}
+
 \usepackage{fancyhdr} %header
 \fancyhf{}
 \fancyhead[R]{Arun Woosaree XXXXXXX}
@@ -94,6 +96,21 @@ What should be on the y-axis?
 \subsection{(b)	Comment briefly on the relationship between thrust and each of the three predictors. In particular, comment on the overall shape (line, curve), direction (positive, negative), and strength (size of the scatter and its inclination) of the relationship. Which of the three predictor variables seems to be the best predictor of thrust? }
 Look at the center of the “clouds”.  Are they linear? Strength of
 linear relationship?
+
+\begin{itemize}
+ \item The plot for rate vs. thrust above appears to exhibit a fairly strong positive
+       linear relationship
+ \item The plot for extemp vs. thrust above appears to exhibit a fairly strong positive
+       linear relationship
+ \item The plot for ambtemp vs. thrust above does not appear to exhibit a strong linear
+       relationship. It is possible that there is no relation between the ambient
+       temperature and the thrust, or that there is a weak slightly negative linear
+       relationship between the ambient temperature and thrust.
+\end{itemize}
+
+Overall, the rate seems to have the stongest linear relationship with the thrust.
+\todo{Which of the three predictor variables seems to be the best predictor of thrust?}
+So it's the best predictor?
 
 \section{2.	Examining the array of all possible pairwise correlation coefficients is another way to understand the relationships among variables. Use the Correlation tool in the Data Analysis menu to obtain the correlation matrix for the four variables}
 
