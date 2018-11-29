@@ -66,12 +66,13 @@
 \end{titlepage}
 
 \section{1.	First examine the relationship between the response variable (thrust) and each of of the three  predictor variables with scatterplots.}
+\label{q1}
 
 \subsection{(a)	Obtain a scatterplot of thrust versus each of the three predictors. The  format of each of the three scatterplots should be consistent with the format used in Lab 1 Instructions (no lines or grids, axes rescaled to display only the observed values, title, names of the axes).  Paste the three scatterplots into your report. }
 OUTPUT: 3 Scatterplots, thrust vs. Fuel flow rate, thrust vs.
 exhaust temperature, thrust vs. Ambient temperature.
 What should be on the y-axis?
-
+\todo{captions}
 \begin{figure}[H]
  \centering
  \includegraphics[width=\textwidth]{ratethrust.png}
@@ -103,9 +104,8 @@ linear relationship?
  \item The plot for extemp vs. thrust above appears to exhibit a fairly strong positive
        linear relationship
  \item The plot for ambtemp vs. thrust above does not appear to exhibit a strong linear
-       relationship. It is possible that there is no relation between the ambient
-       temperature and the thrust, or that there is a weak slightly negative linear
-       relationship between the ambient temperature and thrust.
+       relationship. It seems that there is a weak linear
+       relationship between the ambient temperature and thrust, with a slightly negative slope.
 \end{itemize}
 
 Overall, the rate seems to have the stongest linear relationship with the thrust.
@@ -117,9 +117,32 @@ So it's the best predictor?
 \subsection{(a)	Paste the correlation matrix into your report. Make sure that the matrix contains the names of all variables.}
 OUTPUT: Correlation matrix.
 
+\begin{table}[H]
+ \centering
+ \begin{tabular}{c|c|c|c|c|}
+          & rate        & extemp      & ambtemp  & thrust \\ \hline
+  rate    & 1           &             &          &        \\ \hline
+  extemp  & 0.975750317 & 1           &          &        \\ \hline
+  ambtemp & 0.216465939 & 0.301764125 & 1        &        \\ \hline
+  thrust  & 0.928792499 & 0.87169251  & -0.14744 & 1      \\ \hline
+ \end{tabular}
+ \caption{My caption}
+ \label{my-label}
+\end{table}
+\todo{caption}
+
 \subsection{(b)	Identify the regressor variables (predictors) having the largest and smallest absolute values of correlation with the response variable (thrust). Do the signs and magnitudes of the correlation coefficient between thrust and each predictor confirm your conclusions you have reached in Question 1? Explain briefly.}
 Highest correlation, lowest (note absolute value)? Does this
 match the conclusions from Q1?
+
+The regressor variable with the largest value of correlation with the response
+variable thrust is the rate, with a value of $0.928792499$.
+The regressor variable with the lowest value of correlation with the thrust
+is ambtemp, with a value of $-0.14744$.
+This agrees with the conclusions reached in Question \ref{q1}, with
+the rate having the largest correlation with a positive slope, and the
+ambient temperature having a weak correlation and slightly negative slope.
+\todo{maybe be more precise}
 
 \section{3.	Define a simple linear  regression model with thrust as the response variable and fuel flow rate as the predictor variable.  State the model assumptions.}
 Define the model as an equation, use the basic equation of
