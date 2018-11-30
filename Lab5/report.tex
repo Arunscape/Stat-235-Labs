@@ -271,6 +271,7 @@ Additionally, we observe that the Normal Probability plot below
 very closely represents a straight line, so the normality assumption for the
 residuals does seem appropriate.
 \todo{is it because there is a straight line, or is there a better explanation like the residuals being scattered about 0?}
+\todo{do the assumptions hold?}
 
 \begin{figure}[H]
  \centering
@@ -286,37 +287,19 @@ OUTPUT: Regression output. Optional.
 Equation of regression with coefficient values. Determine
 influential points from scatter plot in Q1. Determine outlier residuals from residual plot.
 
-Using the regression tool in Excel, we find $\beta_0=-25860.12772$, and
-$\beta_1=1.005348711$.
+Using the regression tool in Excel, we find $\beta_0=-6643.268654$, and
+$\beta_1=6.384931687$.
 So, Equation \ref{model} becomes
-$$ thrust = -25860.12772 + 1.005348711 \times (rate) + \epsilon$$
+$$ thrust = -6643.268654 + 6.384931687 \times (extemp) + \epsilon$$
 \todo{should $\epsilon$ be in this equation?}
 
-The following points from the scatterplot in Figure \ref{ratethrust} were visually far
-away from the rest of the data, and are therefore influential on the fitted line:
-\begin{itemize}
- \item[] (rate, thrust)
- \item[] (28675, 3368),
- \item[] (29088, 3820),
- \item[] (29604, 4340),
- \item[] (29831, 4617), and
- \item[] (30083, 4833)
-\end{itemize}
-
-The following points on the residual plot had relatively large residuals which were
-visually far away from the rest of the data:
-\begin{itemize}
- \item[] (rate, residual)
- \item[] (28675, 399.7534461),
- \item[] (29088, 436.5444286),
- \item[] (29604, 437.784494),
- \item[] (29831, 486.5703367), and
- \item[] (30083, 449.2224616)
-\end{itemize}
+From the scatterplot in Figure \ref{extempthrust}, there don't seem to be any
+influential points which are far away from the rest of the data. Similarly, there
+are no obvious outliers in the residual plot.
 
 \subsection{(b)	What is the value of s, the estimate of the model standard deviation ($\sigma$)?}
 The estimate of the model standard deviation is:
-$$s = 189.466735$$
+$$s = 250.5362661$$
 \todo{compare to average? wtf???}
 
 \subsection{(c)	What percent of the variation in  thrust is explained by fuel flow rate? What other possible predictor variables may explain the remaining variation?}
@@ -324,9 +307,9 @@ Percent of variation? What might explain variation?
 
 The percentage of the variation in thrust which is explained by the fuel flow rate
 is the $R^2$ value.
-$$R^2 = 0.862655506 \approx 86.27\%$$
-The other predictor variables extemp and ambtemp may explain the remaining variation
-(probably the extemp variable moreso than the ambtemp variable).
+$$R^2 = 0.759847831 \approx 75.98\%$$
+The other predictor variables rate and ambtemp may explain the remaining variation
+(probably the rate variable moreso than the ambtemp variable).
 % \todo{What other possible predictor variables may explain the remaining variation?}
 
 \subsection{(d)	Is linear regression on fuel flow rate of any value in explaining thrust? In particular, state the
@@ -338,11 +321,11 @@ Let the null hypothesis be that the fuel flow rate does not have any value in ex
 $$ H_0: \beta_1 =0 \quad vs. \quad H_A: \beta_1 \neq 0 $$
 The distribution of the test statistic follows a null dustribution.
 Using Excel, we find that
-$$F_0 = 0.586694336 \sim F_{39-2}^{1}$$
+$$F_0 = 10.9650813 \sim F_{39-2}^{1}$$
 \todo{idk what I'm doing wrong here}
 The p-value is
-$$p= \SI{5.72762e-18}{} $$
-Because the p-value obtained is extremely small, we reject $H_0$. i.e. the data strongly suggests that there is a relationship between the fuel flow rate and the thrust.
+$$p= \SI{2.48143e-13}{} $$
+Because the p-value obtained is extremely small, we reject $H_0$. i.e. the data strongly suggests that there is a relationship between the external temperature and the thrust.
 
 \setcounter{subsection}{6}
 \subsection{}
@@ -350,7 +333,7 @@ OUTPUT: Residual Plot. Interpret the plot. Are the assumptions met?
 
 \begin{figure}[H]
  \centering
- \includegraphics[width=\textwidth]{rateresidual.png}
+ \includegraphics[width=\textwidth]{extempresidual.png}
  \caption{INSERT}
  % \label{q6}
 \end{figure}
@@ -359,10 +342,11 @@ Additionally, we observe that the Normal Probability plot below
 very closely represents a straight line, so the normality assumption for the
 residuals does seem appropriate.
 \todo{is it because there is a straight line, or is there a better explanation like the residuals being scattered about 0?}
+\todo{do the assumptions hold?}
 
 \begin{figure}[H]
  \centering
- \includegraphics[width=\textwidth]{normalplot.png}
+ \includegraphics[width=\textwidth]{normalplot2.png}
  \caption{INSERT}
  % \label{q6}
 \end{figure}
