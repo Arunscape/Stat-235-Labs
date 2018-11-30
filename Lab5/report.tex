@@ -73,13 +73,13 @@
  \end{center}
 \end{titlepage}
 
-\section{1.	First examine the relationship between the response variable (thrust) and each of of the three  predictor variables with scatterplots.}
+\section{}
 \label{q1}
 
-\subsection{(a)	Obtain a scatterplot of thrust versus each of the three predictors. The  format of each of the three scatterplots should be consistent with the format used in Lab 1 Instructions (no lines or grids, axes rescaled to display only the observed values, title, names of the axes).  Paste the three scatterplots into your report. }
-OUTPUT: 3 Scatterplots, thrust vs. Fuel flow rate, thrust vs.
-exhaust temperature, thrust vs. Ambient temperature.
-What should be on the y-axis?
+\subsection{}
+% OUTPUT: 3 Scatterplots, thrust vs. Fuel flow rate, thrust vs.
+% exhaust temperature, thrust vs. Ambient temperature.
+% What should be on the y-axis?
 \todo{captions}
 \begin{figure}[H]
  \centering
@@ -102,10 +102,10 @@ What should be on the y-axis?
  % \label{q6}
 \end{figure}
 
-\subsection{(b)	Comment briefly on the relationship between thrust and each of the three predictors. In particular, comment on the overall shape (line, curve), direction (positive, negative), and strength (size of the scatter and its inclination) of the relationship. Which of the three predictor variables seems to be the best predictor of thrust? }
+\subsection{}
 \label{1b}
-Look at the center of the “clouds”.  Are they linear? Strength of
-linear relationship?
+% Look at the center of the “clouds”.  Are they linear? Strength of
+% linear relationship?
 
 \begin{itemize}
  \item The plot for rate vs. thrust above appears to exhibit a relatively strong positive
@@ -123,10 +123,10 @@ since it has a positive slope and the least amount of scatter.
 \todo{Which of the three predictor variables seems to be the best predictor of thrust?}
 So it's the best predictor?
 
-\section{2.	Examining the array of all possible pairwise correlation coefficients is another way to understand the relationships among variables. Use the Correlation tool in the Data Analysis menu to obtain the correlation matrix for the four variables}
+\section{}
 
-\subsection{(a)	Paste the correlation matrix into your report. Make sure that the matrix contains the names of all variables.}
-OUTPUT: Correlation matrix.
+\subsection{}
+% OUTPUT: Correlation matrix.
 
 \begin{table}[H]
  \centering
@@ -142,9 +142,9 @@ OUTPUT: Correlation matrix.
 \end{table}
 \todo{caption}
 
-\subsection{(b)	Identify the regressor variables (predictors) having the largest and smallest absolute values of correlation with the response variable (thrust). Do the signs and magnitudes of the correlation coefficient between thrust and each predictor confirm your conclusions you have reached in Question 1? Explain briefly.}
-Highest correlation, lowest (note absolute value)? Does this
-match the conclusions from Q1?
+\subsection{}
+% Highest correlation, lowest (note absolute value)? Does this
+% match the conclusions from Q1?
 
 The regressor variable with the largest magnitude of correlation with the response
 variable thrust is the rate, with a value of $0.928792499$.
@@ -159,9 +159,9 @@ linear relation with the thrust, and its correlation value is both positive and 
 the rate variable, as predicted in Question \ref{1b}.
 \todo{maybe be more precise}
 
-\section{3.	Define a simple linear regression model with thrust as the response variable and fuel flow rate as the predictor variable.  State the model assumptions.}
-Define the model as an equation, use the basic equation of
-regression. Assumptions of regression?
+\section{}
+% Define the model as an equation, use the basic equation of
+% regression. Assumptions of regression?
 
 The regression model is as follows:
 \begin{equation}
@@ -178,12 +178,12 @@ The model's assumptions are as follows:
  \item The random deviations $\epsilon_1, \epsilon_2, ..., \epsilon_n$ associated with different observations are independent of one another
 \end{itemize}
 
-\section{4.	Perform a simple linear regression analysis using thrust as the response variable and fuel flow rate as the predictor variable using the Regression tool. Then use the computer output to answer the following questions:}
-OUTPUT: Regression output from excel, not necessary/being marked.
+\section{}
+% OUTPUT: Regression output from excel, not necessary/being marked.
 
-\subsection{(a)	What is the estimated regression equation? Are there any influential observations  in the sense that removing them would change the fitted line? Are there any outliers (large residuals)?}
-Equation of regression with coefficient values. Determine
-influential points from scatter plot in Q1. Determine outlier residuals from residual plot.
+\subsection{}
+% Equation of regression with coefficient values. Determine
+% influential points from scatter plot in Q1. Determine outlier residuals from residual plot.
 
 Using the regression tool in Excel, we find $\beta_0=-25860.12772$, and
 $\beta_1=1.005348711$.
@@ -213,13 +213,13 @@ visually far away from the rest of the data:
  \item[] (30083, 449.2224616)
 \end{itemize}
 
-\subsection{(b)	What is the value of s, the estimate of the model standard deviation ($\sigma$)?}
+\subsection{}
 The estimate of the model standard deviation is:
 $$s = 189.466735$$
 \todo{compare to average? wtf???}
 
-\subsection{(c)	What percent of the variation in  thrust is explained by fuel flow rate? What other possible predictor variables may explain the remaining variation?}
-Percent of variation? What might explain variation?
+\subsection{}
+% Percent of variation? What might explain variation?
 
 The percentage of the variation in thrust which is explained by the fuel flow rate
 is the $R^2$ value.
@@ -228,10 +228,9 @@ The other predictor variables extemp and ambtemp may explain the remaining varia
 (probably the extemp variable moreso than the ambtemp variable).
 % \todo{What other possible predictor variables may explain the remaining variation?}
 
-\subsection{(d)	Is linear regression on fuel flow rate of any value in explaining thrust? In particular, state the
- null and alternative hypotheses in terms of the population slope of the regression line, obtain the value of the test statistic, specify the distribution of the test statistic under the null hypothesis, and obtain the p-value of the test. What do you conclude?}
-Hypotheses? What kind of test can you use? Values of test
-statistics? P-value? Null distribution? Conclusion?
+\subsection{}
+% Hypotheses? What kind of test can you use? Values of test
+% statistics? P-value? Null distribution? Conclusion?
 
 Let the null hypothesis be that the fuel flow rate does not have any value in explaining the thrust:
 $$ H_0: \beta_1 =0 \quad vs. \quad H_A: \beta_1 \neq 0 $$
@@ -241,24 +240,25 @@ $$F_0 = 0.586694336 \sim F_{39-2}^{1}$$
 \todo{idk what I'm doing wrong here}
 The p-value is
 $$p= \SI{5.72762e-18}{} $$
+
 Because the p-value obtained is extremely small, we reject $H_0$. i.e. the data strongly suggests that there is a relationship between the fuel flow rate and the thrust.
 
-\subsection{(e)	Use the output to obtain a 95\% confidence interval for the mean change in thrust as fuel flow rate increases by 1 unit.}
+\subsection{}
 The mean change in thrust as the fuel flow rate increases by 1 unit is the slope.
 From the Regression Tool output, we find that the 95\% confidence interval
 for this is:
 $$(0.873611965, 1.137085456)$$
 
-\subsection{(f)	Use the regression model to predict the mean thrust when fuel flow rate is 30,250 (case 1). What is the value of the residual in this case?}
-Predicted value? Residual?
+\subsection{}
+% Predicted value? Residual?
 
 With a flow rate of 30 250, the predicted thrust is:
 $$\hat{y} = \hat{\beta_0} + \hat{\beta_1}x = -25860.12772 + 1.005348711 \times 30250 \approx 4551.671 $$
 In this case, the value of the residual is
 $$e = y-\hat{y} = 4540 - 4551.671 = -11.67077$$
 
-\subsection{(g)	Obtain and paste the plot of residuals against fuel flow rate. Describe the pattern of the residuals. Do the residuals appear to be randomly scattered about a horizontal line at zero? Does the assumption of normality for the residuals seem appropriate? Paste the plot into your report and provide explanations.}
-OUTPUT: Residual plot. Interpret the plot, are the assumptions met?
+\subsection{}
+% OUTPUT: Residual plot. Interpret the plot, are the assumptions met?
 
 \begin{figure}[H]
  \centering
@@ -280,12 +280,12 @@ residuals does seem appropriate.
  % \label{q6}
 \end{figure}
 
-\section{5.	Perform a simple linear regression analysis using thrust as the response variable and exhaust temperature as the predictor variable. Use the computer output to repeat parts (a) – (d) and (g) of Question 4 with exhaust temperature instead of fuel flow rate as the predictor variable. You may copy the appropriate statistics from the output to answer the questions. However, in your answer to part (g), you should include the residual plot.}
-OUTPUT: Regression output. Optional.
+\section{}
+% OUTPUT: Regression output. Optional.
 
-\subsection{(a)	What is the estimated regression equation? Are there any influential observations  in the sense that removing them would change the fitted line? Are there any outliers (large residuals)?}
-Equation of regression with coefficient values. Determine
-influential points from scatter plot in Q1. Determine outlier residuals from residual plot.
+\subsection{}
+% Equation of regression with coefficient values. Determine
+% influential points from scatter plot in Q1. Determine outlier residuals from residual plot.
 
 Using the regression tool in Excel, we find $\beta_0=-6643.268654$, and
 $\beta_1=6.384931687$.
@@ -297,13 +297,13 @@ From the scatterplot in Figure \ref{extempthrust}, there don't seem to be any
 influential points which are far away from the rest of the data. Similarly, there
 are no obvious outliers in the residual plot.
 
-\subsection{(b)	What is the value of s, the estimate of the model standard deviation ($\sigma$)?}
+\subsection{}
 The estimate of the model standard deviation is:
 $$s = 250.5362661$$
 \todo{compare to average? wtf???}
 
-\subsection{(c)	What percent of the variation in  thrust is explained by fuel flow rate? What other possible predictor variables may explain the remaining variation?}
-Percent of variation? What might explain variation?
+\subsection{}
+% Percent of variation? What might explain variation?
 
 The percentage of the variation in thrust which is explained by the fuel flow rate
 is the $R^2$ value.
@@ -312,10 +312,9 @@ The other predictor variables rate and ambtemp may explain the remaining variati
 (probably the rate variable moreso than the ambtemp variable).
 % \todo{What other possible predictor variables may explain the remaining variation?}
 
-\subsection{(d)	Is linear regression on fuel flow rate of any value in explaining thrust? In particular, state the
- null and alternative hypotheses in terms of the population slope of the regression line, obtain the value of the test statistic, specify the distribution of the test statistic under the null hypothesis, and obtain the p-value of the test. What do you conclude?}
-Hypotheses? What kind of test can you use? Values of test
-statistics? P-value? Null distribution? Conclusion?
+\subsection{}
+% Hypotheses? What kind of test can you use? Values of test
+% statistics? P-value? Null distribution? Conclusion?
 
 Let the null hypothesis be that the fuel flow rate does not have any value in explaining the thrust:
 $$ H_0: \beta_1 =0 \quad vs. \quad H_A: \beta_1 \neq 0 $$
@@ -329,7 +328,7 @@ Because the p-value obtained is extremely small, we reject $H_0$. i.e. the data 
 
 \setcounter{subsection}{6}
 \subsection{}
-OUTPUT: Residual Plot. Interpret the plot. Are the assumptions met?
+% OUTPUT: Residual Plot. Interpret the plot. Are the assumptions met?
 
 \begin{figure}[H]
  \centering
@@ -351,8 +350,8 @@ residuals does seem appropriate.
  % \label{q6}
 \end{figure}
 
-\section{6.	Compare the results of the regressions performed in Questions 4 and 5. In particular, construct a table with R2 values, the estimates of the standard deviation (s), the values of the t-statistic, and the p-values for each model. Which of the two models do you think is better (more reliable) at predicting thrust? Explain briefly.}
-What’s the best predictor? S = model standard deviation
+\section{}
+% What’s the best predictor? S = model standard deviation
 
 \begin{table}[H]
  \centering
