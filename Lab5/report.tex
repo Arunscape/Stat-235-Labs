@@ -282,22 +282,90 @@ residuals does seem appropriate.
 \section{5.	Perform a simple linear regression analysis using thrust as the response variable and exhaust temperature as the predictor variable. Use the computer output to repeat parts (a) – (d) and (g) of Question 4 with exhaust temperature instead of fuel flow rate as the predictor variable. You may copy the appropriate statistics from the output to answer the questions. However, in your answer to part (g), you should include the residual plot.}
 OUTPUT: Regression output. Optional.
 
-\subsection{}
-Equation with numerical values of coefficients. Determine
-influential points from scatter plot in Q1. Determine outlier residual from residual plot.
+\subsection{(a)	What is the estimated regression equation? Are there any influential observations  in the sense that removing them would change the fitted line? Are there any outliers (large residuals)?}
+Equation of regression with coefficient values. Determine
+influential points from scatter plot in Q1. Determine outlier residuals from residual plot.
 
-\subsection{}
-Standard deviation? Compare to average.
+Using the regression tool in Excel, we find $\beta_0=-25860.12772$, and
+$\beta_1=1.005348711$.
+So, Equation \ref{model} becomes
+$$ thrust = -25860.12772 + 1.005348711 \times (rate) + \epsilon$$
+\todo{should $\epsilon$ be in this equation?}
 
-\subsection{}
-Percent of variation?
+The following points from the scatterplot in Figure \ref{ratethrust} were visually far
+away from the rest of the data, and are therefore influential on the fitted line:
+\begin{itemize}
+ \item[] (rate, thrust)
+ \item[] (28675, 3368),
+ \item[] (29088, 3820),
+ \item[] (29604, 4340),
+ \item[] (29831, 4617), and
+ \item[] (30083, 4833)
+\end{itemize}
 
-\subsection{}
-Hypotheses? Distribution? Test statistic? P-value? Conclusion?
+The following points on the residual plot had relatively large residuals which were
+visually far away from the rest of the data:
+\begin{itemize}
+ \item[] (rate, residual)
+ \item[] (28675, 399.7534461),
+ \item[] (29088, 436.5444286),
+ \item[] (29604, 437.784494),
+ \item[] (29831, 486.5703367), and
+ \item[] (30083, 449.2224616)
+\end{itemize}
+
+\subsection{(b)	What is the value of s, the estimate of the model standard deviation ($\sigma$)?}
+The estimate of the model standard deviation is:
+$$s = 189.466735$$
+\todo{compare to average? wtf???}
+
+\subsection{(c)	What percent of the variation in  thrust is explained by fuel flow rate? What other possible predictor variables may explain the remaining variation?}
+Percent of variation? What might explain variation?
+
+The percentage of the variation in thrust which is explained by the fuel flow rate
+is the $R^2$ value.
+$$R^2 = 0.862655506 \approx 86.27\%$$
+The other predictor variables extemp and ambtemp may explain the remaining variation
+(probably the extemp variable moreso than the ambtemp variable).
+% \todo{What other possible predictor variables may explain the remaining variation?}
+
+\subsection{(d)	Is linear regression on fuel flow rate of any value in explaining thrust? In particular, state the
+ null and alternative hypotheses in terms of the population slope of the regression line, obtain the value of the test statistic, specify the distribution of the test statistic under the null hypothesis, and obtain the p-value of the test. What do you conclude?}
+Hypotheses? What kind of test can you use? Values of test
+statistics? P-value? Null distribution? Conclusion?
+
+Let the null hypothesis be that the fuel flow rate does not have any value in explaining the thrust:
+$$ H_0: \beta_1 =0 \quad vs. \quad H_A: \beta_1 \neq 0 $$
+The distribution of the test statistic follows a null dustribution.
+Using Excel, we find that
+$$F_0 = 0.586694336 \sim F_{39-2}^{1}$$
+\todo{idk what I'm doing wrong here}
+The p-value is
+$$p= \SI{5.72762e-18}{} $$
+Because the p-value obtained is extremely small, we reject $H_0$. i.e. the data strongly suggests that there is a relationship between the fuel flow rate and the thrust.
 
 \setcounter{subsection}{6}
 \subsection{}
 OUTPUT: Residual Plot. Interpret the plot. Are the assumptions met?
+
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=\textwidth]{rateresidual.png}
+ \caption{INSERT}
+ % \label{q6}
+\end{figure}
+The residuals appear randomly scattered about the horizontal 0 line.
+Additionally, we observe that the Normal Probability plot below
+very closely represents a straight line, so the normality assumption for the
+residuals does seem appropriate.
+\todo{is it because there is a straight line, or is there a better explanation like the residuals being scattered about 0?}
+
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=\textwidth]{normalplot.png}
+ \caption{INSERT}
+ % \label{q6}
+\end{figure}
 
 \section{6.	Compare the results of the regressions performed in Questions 4 and 5. In particular, construct a table with R2 values, the estimates of the standard deviation (s), the values of the t-statistic, and the p-values for each model. Which of the two models do you think is better (more reliable) at predicting thrust? Explain briefly.}
 What’s the best predictor? S = model standard deviation
@@ -306,13 +374,18 @@ What’s the best predictor? S = model standard deviation
  \centering
  \begin{tabular}{|c|c|c|c|c|}
   \hline
-  Thrust vs. & $R^2$ & s & t-statistic & p-value \\ \hline
-  Rate       & 0     & 0 & 0           & 0       \\ \hline
-  Extemp     & 0     & 0 & 0           & 0       \\ \hline
+  Thrust vs. & $R^2$       & s           & t-statistic & p-value            \\ \hline
+  Rate       & 0.862655506 & 189.466735  & 15.44915999 & \SI{5.72762e-18}{} \\ \hline
+  Extemp     & 0.759847831 & 250.5362661 & 10.9650813  & \SI{2.48143e-13}{} \\ \hline
  \end{tabular}
  \caption{My caption}
  \label{q6}
 \end{table}
+
+The fuel flow rate appears to be the best predictor of thrust. It has a stronger
+correlation (larger $R^2$), and it also accounts for a larger percentage of the
+variation in thrust. It also has a smaller standard error, and a much smaller
+p-value.
 
 
 \newpage
