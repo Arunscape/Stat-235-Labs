@@ -188,7 +188,7 @@ influential points from scatter plot in Q1. Determine outlier residuals from res
 Using the regression tool in Excel, we find $\beta_0=-25860.12772$, and
 $\beta_1=1.005348711$.
 So, Equation \ref{model} becomes
-$$ Thrust = -25860.12772 + 1.005348711 \times (rate) + \epsilon$$
+$$ thrust = -25860.12772 + 1.005348711 \times (rate) + \epsilon$$
 \todo{should $\epsilon$ be in this equation?}
 
 The following points from the scatterplot in Figure \ref{ratethrust} were visually far
@@ -214,15 +214,19 @@ visually far away from the rest of the data:
 \end{itemize}
 
 \subsection{(b)	What is the value of s, the estimate of the model standard deviation ($\sigma$)?}
-Standard deviation? Compare to average.
-$$\hat{\sigma}^2 = 1364110.459 \Rightarrow \hat{\sigma} = 1167.95139411$$
-or is it just
+The estimate of the model standard deviation is:
 $$s = 189.466735$$
-\todo{I have no idea if this is correct}
+\todo{compare to average? wtf???}
 
 \subsection{(c)	What percent of the variation in  thrust is explained by fuel flow rate? What other possible predictor variables may explain the remaining variation?}
 Percent of variation? What might explain variation?
-\todo{idk it might be 86.266\%}
+
+The percentage of the variation in thrust which is explained by the fuel flow rate
+is the $R^2$ value.
+$$R^2 = 0.862655506 \approx 86.27\%$$
+The other predictor variables extemp and ambtemp may explain the remaining variation
+(probably the extemp variable moreso than the ambtemp variable).
+% \todo{What other possible predictor variables may explain the remaining variation?}
 
 \subsection{(d)	Is linear regression on fuel flow rate of any value in explaining thrust? In particular, state the
  null and alternative hypotheses in terms of the population slope of the regression line, obtain the value of the test statistic, specify the distribution of the test statistic under the null hypothesis, and obtain the p-value of the test. What do you conclude?}
@@ -230,29 +234,50 @@ Hypotheses? What kind of test can you use? Values of test
 statistics? P-value? Null distribution? Conclusion?
 
 Let the null hypothesis be that the fuel flow rate does not have any value in explaining the thrust:
-$$ H_0: \beta_1 =0 vs. \quad H_A: \beta_1 \neq 0 $$
+$$ H_0: \beta_1 =0 \quad vs. \quad H_A: \beta_1 \neq 0 $$
 The distribution of the test statistic follows a null dustribution.
 Using Excel, we find that
-$$F_0 = XX \sim F_{XX} = 15.44915999$$
+$$F_0 = 0.586694336 \sim F_{39-2}^{1}$$
+\todo{idk what I'm doing wrong here}
 The p-value is
 $$p= \SI{5.72762e-18}{} $$
-oijdopweh
-
-\todo{complete this}
 Because the p-value obtained is extremely small, we reject $H_0$. i.e. the data strongly suggests that there is a relationship between the fuel flow rate and the thrust.
 
 \subsection{(e)	Use the output to obtain a 95\% confidence interval for the mean change in thrust as fuel flow rate increases by 1 unit.}
-Interpret coefficients. Confidence interval?
-\todo{}
-$$XXX \pm XXX \approx (0.873612,1.137085)$$
+The mean change in thrust as the fuel flow rate increases by 1 unit is the slope.
+From the Regression Tool output, we find that the 95\% confidence interval
+for this is:
+$$(0.873611965, 1.137085456)$$
 
 \subsection{(f)	Use the regression model to predict the mean thrust when fuel flow rate is 30,250 (case 1). What is the value of the residual in this case?}
 Predicted value? Residual?
-$$\mu_{thrust} = some calculation = 4551.67077$$
-$$residual = some calculation = -11.67077$$
+
+With a flow rate of 30 250, the predicted thrust is:
+$$\hat{y} = \hat{\beta_0} + \hat{\beta_1}x = -25860.12772 + 1.005348711 \times 30250 \approx 4551.671 $$
+In this case, the value of the residual is
+$$e = y-\hat{y} = 4540 - 4551.671 = -11.67077$$
 
 \subsection{(g)	Obtain and paste the plot of residuals against fuel flow rate. Describe the pattern of the residuals. Do the residuals appear to be randomly scattered about a horizontal line at zero? Does the assumption of normality for the residuals seem appropriate? Paste the plot into your report and provide explanations.}
 OUTPUT: Residual plot. Interpret the plot, are the assumptions met?
+
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=\textwidth]{rateresidual.png}
+ \caption{INSERT}
+ % \label{q6}
+\end{figure}
+The residuals appear randomly scattered about the horizontal 0 line.
+Additionally, we observe that the Normal Probability plot below
+very closely represents a straight line, so the normality assumption for the
+residuals does seem appropriate.
+\todo{is it because there is a straight line, or is there a better explanation like the residuals being scattered about 0?}
+
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=\textwidth]{normalplot.png}
+ \caption{INSERT}
+ % \label{q6}
+\end{figure}
 
 \section{5.	Perform a simple linear regression analysis using thrust as the response variable and exhaust temperature as the predictor variable. Use the computer output to repeat parts (a) – (d) and (g) of Question 4 with exhaust temperature instead of fuel flow rate as the predictor variable. You may copy the appropriate statistics from the output to answer the questions. However, in your answer to part (g), you should include the residual plot.}
 OUTPUT: Regression output. Optional.
