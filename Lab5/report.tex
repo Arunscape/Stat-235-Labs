@@ -80,25 +80,25 @@
 % OUTPUT: 3 Scatterplots, thrust vs. Fuel flow rate, thrust vs.
 % exhaust temperature, thrust vs. Ambient temperature.
 % What should be on the y-axis?
-\todo{captions}
+% \todo{captions}
 \begin{figure}[H]
  \centering
  \includegraphics[width=\textwidth]{ratethrust.png}
- \caption{INSERT CAPTION HERE}
+ \caption{Fuel flow rate and the corresponding thrust}
  \label{ratethrust}
 \end{figure}
 
 \begin{figure}[H]
  \centering
  \includegraphics[width=\textwidth]{extempthrust.png}
- \caption{INSERT CAPTION}
+ \caption{External temperature and the corresponding thrust}
  % \label{q6}
 \end{figure}
 
 \begin{figure}[H]
  \centering
  \includegraphics[width=\textwidth]{ambtempthrust.png}
- \caption{INSERT}
+ \caption{Ambient temperature and the corresponding thrust}
  % \label{q6}
 \end{figure}
 
@@ -120,8 +120,9 @@
 
 Overall, the rate seems to have the stongest linear relationship with the thrust,
 since it has a positive slope and the least amount of scatter.
-\todo{Which of the three predictor variables seems to be the best predictor of thrust?}
-So it's the best predictor?
+\todo{does more need to be said?}
+% \todo{Which of the three predictor variables seems to be the best predictor of thrust?}
+% So it's the best predictor?
 
 \section{}
 
@@ -137,7 +138,7 @@ So it's the best predictor?
   ambtemp & 0.216465939 & 0.301764125 & 1        &        \\ \hline
   thrust  & 0.928792499 & 0.87169251  & -0.14744 & 1      \\ \hline
  \end{tabular}
- \caption{Correlation matrix}
+ \caption{Correlation matrix for the variables}
  \label{correlationmatrix}
 \end{table}
 \todo{caption}
@@ -236,7 +237,7 @@ Let the null hypothesis be that the fuel flow rate does not have any value in ex
 $$ H_0: \beta_1 =0 \quad vs. \quad H_A: \beta_1 \neq 0 $$
 The distribution of the test statistic follows a null dustribution.
 Using Excel, we find that
-$$F_0 = 0.586694336 \sim F_{39-2}^{1}$$
+$$F_0 = 15.44915999 \sim F_{39-2}^{1}$$
 \todo{idk what I'm doing wrong here}
 The p-value is
 $$p= \SI{5.72762e-18}{} $$
@@ -263,7 +264,7 @@ $$e = y-\hat{y} = 4540 - 4551.671 = -11.67077$$
 \begin{figure}[H]
  \centering
  \includegraphics[width=\textwidth]{rateresidual.png}
- \caption{INSERT}
+ \caption{Plot of residuals for the rate variable}
  % \label{q6}
 \end{figure}
 The residuals appear randomly scattered about the horizontal 0 line.
@@ -276,7 +277,7 @@ residuals does seem appropriate.
 \begin{figure}[H]
  \centering
  \includegraphics[width=\textwidth]{normalplot.png}
- \caption{INSERT}
+ \caption{Normal probability plot for the rate variable}
  % \label{q6}
 \end{figure}
 
@@ -322,6 +323,7 @@ The distribution of the test statistic follows a null dustribution.
 Using Excel, we find that
 $$F_0 = 10.9650813 \sim F_{39-2}^{1}$$
 \todo{idk what I'm doing wrong here}
+\todo{state the distribution of the test statistic}
 The p-value is
 $$p= \SI{2.48143e-13}{} $$
 Because the p-value obtained is extremely small, we reject $H_0$. i.e. the data strongly suggests that there is a relationship between the external temperature and the thrust.
@@ -333,7 +335,7 @@ Because the p-value obtained is extremely small, we reject $H_0$. i.e. the data 
 \begin{figure}[H]
  \centering
  \includegraphics[width=\textwidth]{extempresidual.png}
- \caption{INSERT}
+ \caption{Residual plot for the external temperature variable}
  % \label{q6}
 \end{figure}
 The residuals appear randomly scattered about the horizontal 0 line.
@@ -346,7 +348,7 @@ residuals does seem appropriate.
 \begin{figure}[H]
  \centering
  \includegraphics[width=\textwidth]{normalplot2.png}
- \caption{INSERT}
+ \caption{Normal plot for the external temperature variable}
  % \label{q6}
 \end{figure}
 
@@ -361,7 +363,7 @@ residuals does seem appropriate.
   Rate       & 0.862655506 & 189.466735  & 15.44915999 & \SI{5.72762e-18}{} \\ \hline
   Extemp     & 0.759847831 & 250.5362661 & 10.9650813  & \SI{2.48143e-13}{} \\ \hline
  \end{tabular}
- \caption{My caption}
+ \caption{Summary of regression results}
  \label{q6}
 \end{table}
 
