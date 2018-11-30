@@ -119,8 +119,10 @@
 \end{itemize}
 
 Overall, the rate seems to have the stongest linear relationship with the thrust,
-since it has a positive slope and the least amount of scatter.
-\todo{does more need to be said?}
+since it has
+%a positive slope and
+the least amount of scatter.
+% \todo{does more need to be said?}
 % \todo{Which of the three predictor variables seems to be the best predictor of thrust?}
 % So it's the best predictor?
 
@@ -158,7 +160,7 @@ ambient temperature having a weak correlation and slightly negative slope.
 Additionally, we see that the exhaust temperature also has a fairly strong
 linear relation with the thrust, and its correlation value is both positive and less than
 the rate variable, as predicted in Question \ref{1b}.
-\todo{maybe be more precise}
+% \todo{maybe be more precise}
 
 \section{}
 % Define the model as an equation, use the basic equation of
@@ -169,8 +171,14 @@ The regression model is as follows:
  y = \beta_0 + \beta_1 x + \epsilon
  \label{model}
 \end{equation}
+% \todo{ask her if this is fine}
 , where $y$ is the thrust, $x$ is the fuel flow rate, $\beta_0$ is the y-intercept, $\beta_1$
 is the slope, and $\epsilon$ is the random error.
+% %NOTE
+So, Equation \ref{model} becomes
+$$thrust = \beta_0 + \beta_{rate} \times (rate) + \epsilon$$
+% \todo{}
+% %NOTE
 The model's assumptions are as follows:
 \begin{itemize}
  \item The distribution of $\epsilon$ at any $x$ has a mean of 0 ($\mu_\epsilon=0$ to aid linearity)
@@ -189,8 +197,8 @@ The model's assumptions are as follows:
 Using the regression tool in Excel, we find $\beta_0=-25860.12772$, and
 $\beta_1=1.005348711$.
 So, Equation \ref{model} becomes
-$$ thrust = -25860.12772 + 1.005348711 \times (rate) + \epsilon$$
-\todo{should $\epsilon$ be in this equation?}
+$$ thrust = -25860.12772 + 1.005348711 \times (rate)$$
+% \todo{should $\epsilon$ be in this equation?}
 
 The following points from the scatterplot in Figure \ref{ratethrust} were visually far
 away from the rest of the data, and are therefore influential on the fitted line:
@@ -217,7 +225,7 @@ visually far away from the rest of the data:
 \subsection{}
 The estimate of the model standard deviation is:
 $$s = 189.466735$$
-\todo{compare to average? wtf???}
+% \todo{compare to average? wtf???}
 
 \subsection{}
 % Percent of variation? What might explain variation?
@@ -238,8 +246,8 @@ $$ H_0: \beta_1 =0 \quad vs. \quad H_A: \beta_1 \neq 0 $$
 The distribution of the test statistic follows a null dustribution.
 Using Excel, we find that
 $$F_0 = 15.44915999 \sim F_{39-2}^{1}$$
-\todo{idk what I'm doing wrong here}
-The p-value is
+% \todo{idk what I'm doing wrong here}
+Using Excel, we find the p-value is:
 $$p= \SI{5.72762e-18}{} $$
 
 Because the p-value obtained is extremely small, we reject $H_0$. i.e. the data strongly suggests that there is a relationship between the fuel flow rate and the thrust.
@@ -268,18 +276,19 @@ $$e = y-\hat{y} = 4540 - 4551.671 = -11.67077$$
  % \label{q6}
 \end{figure}
 The residuals appear randomly scattered about the horizontal 0 line.
-Additionally, we observe that the Normal Probability plot below
-very closely represents a straight line, so the normality assumption for the
+Because of this, the normality assumption for the
 residuals does seem appropriate.
-\todo{is it because there is a straight line, or is there a better explanation like the residuals being scattered about 0?}
-\todo{explain that the other assumptions hold too}
+The constant variance assumption may not hold, however
+since the plot seems to pointed ever so slightly upwards.
+% \todo{is it because there is a straight line, or is there a better explanation like the residuals being scattered about 0?}
+% \todo{explain that the other assumptions hold too}
 
-\begin{figure}[H]
- \centering
- \includegraphics[width=\textwidth]{normalplot.png}
- \caption{Normal probability plot for the rate variable}
- % \label{q6}
-\end{figure}
+% \begin{figure}[H]
+%  \centering
+%  \includegraphics[width=\textwidth]{normalplot.png}
+%  \caption{Normal probability plot for the rate variable}
+%  % \label{q6}
+% \end{figure}
 
 \section{}
 % OUTPUT: Regression output. Optional.
@@ -291,8 +300,8 @@ residuals does seem appropriate.
 Using the regression tool in Excel, we find $\beta_0=-6643.268654$, and
 $\beta_1=6.384931687$.
 So, Equation \ref{model} becomes
-$$ thrust = -6643.268654 + 6.384931687 \times (extemp) + \epsilon$$
-\todo{should $\epsilon$ be in this equation?}
+$$ thrust = -6643.268654 + 6.384931687 \times (extemp)$$
+% \todo{should $\epsilon$ be in this equation?}
 
 From the scatterplot in Figure \ref{extempthrust}, there don't seem to be any
 influential points which are far away from the rest of the data. Similarly, there
@@ -301,7 +310,7 @@ are no obvious outliers in the residual plot.
 \subsection{}
 The estimate of the model standard deviation is:
 $$s = 250.5362661$$
-\todo{compare to average? wtf???}
+% \todo{compare to average? wtf???}
 
 \subsection{}
 % Percent of variation? What might explain variation?
@@ -322,9 +331,9 @@ $$ H_0: \beta_1 =0 \quad vs. \quad H_A: \beta_1 \neq 0 $$
 The distribution of the test statistic follows a null dustribution.
 Using Excel, we find that
 $$F_0 = 10.9650813 \sim F_{39-2}^{1}$$
-\todo{idk what I'm doing wrong here}
-\todo{state the distribution of the test statistic}
-The p-value is
+% \todo{idk what I'm doing wrong here}
+% \todo{state the distribution of the test statistic}
+Using Excel, we find that the p-value is:
 $$p= \SI{2.48143e-13}{} $$
 Because the p-value obtained is extremely small, we reject $H_0$. i.e. the data strongly suggests that there is a relationship between the exhaust temperature and the thrust.
 
@@ -339,18 +348,19 @@ Because the p-value obtained is extremely small, we reject $H_0$. i.e. the data 
  % \label{q6}
 \end{figure}
 The residuals appear randomly scattered about the horizontal 0 line.
-Additionally, we observe that the Normal Probability plot below
-very closely represents a straight line, so the normality assumption for the
+Because of this, the normality assumption for the
 residuals does seem appropriate.
-\todo{is it because there is a straight line, or is there a better explanation like the residuals being scattered about 0?}
-\todo{explain why the other assumptions hold too}
+The constant variance assumption may not hold, since
+the plot appears to be pointed slightly upwards.
+% \todo{is it because there is a straight line, or is there a better explanation like the residuals being scattered about 0?}
+% \todo{explain why the other assumptions hold too}
 
-\begin{figure}[H]
- \centering
- \includegraphics[width=\textwidth]{normalplot2.png}
- \caption{Normal plot for the exhaust temperature variable}
- % \label{q6}
-\end{figure}
+% \begin{figure}[H]
+%  \centering
+%  \includegraphics[width=\textwidth]{normalplot2.png}
+%  \caption{Normal plot for the exhaust temperature variable}
+%  % \label{q6}
+% \end{figure}
 
 \section{}
 % What’s the best predictor? S = model standard deviation
@@ -369,8 +379,8 @@ residuals does seem appropriate.
 
 The fuel flow rate appears to be the best predictor of thrust. It has a stronger
 correlation (larger $R^2$), and it also accounts for a larger percentage of the
-variation in thrust. It also has a smaller standard error, and a much smaller
-p-value.
+variation in thrust. It also has a smaller standard error relative to its
+respective mean, and a much smaller p-value.
 
 
 % \newpage
